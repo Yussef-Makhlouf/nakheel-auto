@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import { MapPin, Phone, Mail, Facebook, Instagram, Twitter, Youtube } from "lucide-react"
+import { MapPin, Phone, Mail, Facebook, Instagram, Twitter, Youtube, Linkedin } from "lucide-react"
 
 export function Footer() {
   return (
@@ -89,37 +89,23 @@ export function Footer() {
           <div>
             <h3 className="mb-4 text-lg font-bold text-white">تابعنا / Follow Us</h3>
             <div className="flex gap-4">
+        
               <Link 
-                href="https://facebook.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-white/80 hover:text-[#EAB308] transition-colors"
-              >
-                <Facebook className="h-6 w-6" />
-              </Link>
-              <Link 
-                href="https://instagram.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-white/80 hover:text-[#EAB308] transition-colors"
-              >
-                <Instagram className="h-6 w-6" />
-              </Link>
-              <Link 
-                href="https://x.com/almjmalshamlcar" 
+                href="https://x.com/nakheelautopark" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-white/80 hover:text-[#EAB308] transition-colors"
               >
                 <Twitter className="h-6 w-6" />
               </Link>
+      
               <Link 
-                href="https://youtube.com" 
+                href="https://www.linkedin.com/in/%D9%85%D8%AC%D9%85%D8%B9-%D8%A7%D9%84%D9%86%D8%AE%D9%8A%D9%84-%D8%A7%D9%84%D8%B4%D8%A7%D9%85%D9%84-%D9%84%D9%85%D8%B1%D8%A7%D9%83%D8%B2-%D8%B5%D9%8A%D8%A7%D9%86%D8%A9-%D8%A7%D9%84%D8%B3%D9%8A%D8%A7%D8%B1%D8%A7%D8%AA-b0b95b362/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-white/80 hover:text-[#EAB308] transition-colors"
               >
-                <Youtube className="h-6 w-6" />
+                <Linkedin className="h-6 w-6" />
               </Link>
             </div>
           </div>
