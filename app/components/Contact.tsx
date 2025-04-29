@@ -25,8 +25,8 @@ export function Contact() {
                   <MapPin className="mt-1 h-5 w-5 text-[#0A2F5D]" />
                   <div>
                     <p className="font-medium text-gray-700">العنوان</p>
-                    <p className="text-sm text-gray-500">شارع الملك عبد العزيز، جدة، المملكة العربية السعودية</p>
-                    <p className="text-sm text-gray-500">King Abdulaziz Street, Jeddah, Saudi Arabia</p>
+                    <p className="text-sm text-gray-500">خالد بن يزيد، النخيل، جدة المملكة العربية السعودية</p>
+                    <p className="text-sm text-gray-500">Khalid bin Yazid, Al Nakheel, Jeddah, Saudi Arabia</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -151,9 +151,7 @@ export function Contact() {
             <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/90 p-6 text-center text-white">
               <h2 className="mb-4 text-3xl font-bold"> مجمع النخيل الشامل </h2>
               <p className="text-xl">   أكبر مجمع لمراكز صيانة السيارات بقلب جده</p>
-              <Button className="mt-6 bg-[#EAB308] hover:bg-[#EAB308]/90">
-                اكتشف المزيد
-              </Button>
+        
             </div>
           </div>
         </div>
