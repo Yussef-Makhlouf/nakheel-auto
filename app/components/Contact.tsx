@@ -81,16 +81,16 @@ export function Contact() {
               <span className="text-lg font-medium text-[#0A2F5D]/70">Partners of Success and Achievement</span>
             </h3>
             <div className="space-y-6">
-              <div className="grid grid-cols-2 gap-4">
-                <div className="flex flex-col items-center justify-center rounded-lg bg-white p-4 shadow-sm">
+              <div className="grid grid-cols-3 gap-4">
+                <div className="col-span-2 flex flex-col items-center justify-center rounded-lg bg-white p-6 shadow-sm">
                   <Image
                     src="/part7.png"
                     alt="Partner 1"
-                    width={120}
-                    height={80}
+                    width={200}
+                    height={120}
                     className="object-contain"
                   />
-                  <p className="mt-2 text-sm font-medium text-gray-700"> درة القمره</p>
+                  <p className="mt-4 text-lg font-medium text-gray-700">درة القمره</p>
                 </div>
                 <div className="flex flex-col items-center justify-center rounded-lg bg-white p-4 shadow-sm">
                   <Image
@@ -110,7 +110,7 @@ export function Contact() {
                     height={80}
                     className="object-contain"
                   />
-                  <p className="mt-2 text-sm font-medium text-gray-700"> شركة نظم الانشاء و التعمير</p>
+                  <p className="mt-2 text-sm font-medium text-gray-700">شركة نظم الانشاء و التعمير</p>
                 </div>
                 <div className="flex flex-col items-center justify-center rounded-lg bg-white p-4 shadow-sm">
                   <Image
@@ -120,17 +120,17 @@ export function Contact() {
                     height={80}
                     className="object-contain"
                   />
-                  <p className="mt-2 text-sm font-medium text-gray-700"> مكتب م. حسين حسن</p>
+                  <p className="mt-2 text-sm font-medium text-gray-700">مكتب م. حسين حسن</p>
                 </div>
                 <div className="flex flex-col items-center justify-center rounded-lg bg-white p-4 shadow-sm">
                   <Image
                     src="/part1.png"
-                    alt="Partner 4"
+                    alt="Partner 5"
                     width={120}
                     height={80}
                     className="object-contain"
                   />
-                  <p className="mt-2 text-sm font-medium text-gray-700">الانشاءات الحديديه </p>
+                  <p className="mt-2 text-sm font-medium text-gray-700">الانشاءات الحديديه</p>
                 </div>
               </div>
             </div>   
