@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export default function FloatingButtons() {
   const phoneNumber = '0505740134';
-  const whatsappNumber = '971505740134'; // WhatsApp requires country code without '+'
+  const whatsappNumber = '966505740134'; // WhatsApp requires country code without '+'
 
   return (
     <div className="fixed bottom-4 right-4 flex flex-col gap-2 z-50">
