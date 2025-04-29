@@ -110,13 +110,13 @@ export function Advantages() {
             >
               {index % 2 === 1 && <DotsDecoration className="absolute -left-8 top-1/2" />}
               <div className="w-full lg:w-1/2">
-                <div className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden rounded-2xl shadow-2xl">
+                <div className="relative w-full h-[300px] sm:h-[300px] md:h-[300px] lg:h-[600px] overflow-hidden rounded-2xl shadow-2xl">
                   <Image
                     src={advantage.image}
                     alt={advantage.title}
                     fill
-                    className="object-cover w-full h-full"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    className="object-contain w-full h-full"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw, (max-width: 1600px) 33vw, 25vw"
                     priority={index === 0}
                   />
                 </div>
