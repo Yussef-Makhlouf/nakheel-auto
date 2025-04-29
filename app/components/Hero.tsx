@@ -13,11 +13,11 @@ export function Hero() {
           <div className="mb-6 flex items-center justify-center">
             <div className="relative h-24 w-24 overflow-hidden rounded-full border-4 border-[#EAB308] p-1">
               <Image
-                src="/cover.png"
+                src="/logo.png"
                 alt="شعار مجمع النخيل"
                 width={120}
                 height={120}
-                className="h-full w-full rounded-full object-cover"
+                className="h-full w-full rounded-full pt-1 object-cover"
               />
             </div>
           </div>

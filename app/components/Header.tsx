@@ -9,11 +9,11 @@ export function Header() {
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-2">
           <Image
-            src="/placeholder.svg?height=40&width=40"
+            src="/logo.png"
             alt="شعار مجمع النخيل"
-            width={40}
-            height={40}
-            className="h-10 w-10"
+            width={120}
+            height={120}
+            className="h-12 w-10"
           />
           <span className="text-xl font-bold text-[#0A2F5D]">مجمع النخيل الشامل</span>
         </div>
