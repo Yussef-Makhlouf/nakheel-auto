@@ -44,7 +44,7 @@ export function Advantages() {
       description: "وجود الموقع في وسط جدة، وسهولة الوصول منه واليه من كافة الاتجاهات شمالا وجنوبا وغربا وشرقا، إضافة لقرب الموقع من أهم التجمعات السكنية ومراكز الأعمال وأسواق قطع الغيار بجـده.",
       descriptionEn: "The location of the site in the center of Jeddah, and easy access to and from all directions north, south, west and east, in addition to the proximity of the site to the residential districts, business centers and spare parts markets in Jeddah.",
       icon: MapPin,
-      image: "/images/location.jpg",
+      image: "/des1.png",
       color: "from-blue-600 to-blue-800",
       size: "large"
     },
@@ -54,7 +54,7 @@ export function Advantages() {
       description: "وجود المشروع في منطقة نظامية، مع وجود كافة التراخيص التنظيمية من أمانة محافظة جده لكل أنواع صيانة السيارات، بما فيها أعمال الميكانيك والكهرباء والسمكرة والدهان.",
       descriptionEn: "The project is located in a regular area, with all regulatory licenses from Amana as a portfolio for all types of car maintenance, including mechanical, electrical, plumbing and painting works.",
       icon: Shield,
-      image: "/images/licenses.jpg",
+      image: "/des2.png",
       color: "from-green-600 to-green-800",
       size: "medium"
     },
@@ -64,7 +64,7 @@ export function Advantages() {
       description: "توفر وحدات مكتبية خاصة بكل وحدة ومزودة بكافة المرافق الخاصة اللازمة للحصول على بيئة عمل متكاملة ومثالية واقتصادية. توفر كافة الاحتياجات اللوجستية من مساحات حركة واسعة، وسهولة الدخول والخروج ومواقف السيارات والشاحنات الكبيرة والصغيرة، مع تخصيص مساحات كافية لكل وحدة مخصصة كمواقف سيارات.",
       descriptionEn: "It provides office units for each unit and is equipped with all the special facilities necessary to obtain an integrated, ideal and economical work environment. It provides all logistical needs from large movement spaces, ease of entry and exit, parking lots, cars, large and small trucks, with sufficient spaces allocated for each unit designated as parking lots.",
       icon: Building,
-      image: "/images/facilities.jpg",
+      image: "/des3.png",
       color: "from-purple-600 to-purple-800",
       size: "small"
     },
@@ -74,7 +74,7 @@ export function Advantages() {
       description: "توفير الحراسات والأنظمة الأمنية على مدار الساعة وتعزيزها بكاميرات مراقبة متطورة لمراقبة وتأمين المجمع من جميع الجهات لضمان توفير بيئة عمل آمنة ومريحة. تركيب كافة تجهيزات وأنظمة مكافحة الحريق بأعلى المواصفات الهندسية. توفر كافة الخدمات والبنية التحتية (كهرباء وماء وصرف صحي وصرف صناعي).",
       descriptionEn: "Providing guards and security systems around 24 hours with advanced surveillance cameras to monitor and secure the complex from all sides to ensure a safe and comfortable work environment. Installation of all firefighting equipment and systems with the highest engineering specifications. Availability of all services and infrastructure (electricity, water, sewage and industrial sewage).",
       icon: Shield,
-      image: "/images/security.jpg",
+      image: "/des4.png",
       color: "from-red-600 to-red-800",
       size: "medium"
     }
@@ -141,7 +141,7 @@ export function Advantages() {
                     fill
                     className="object-cover"
                   />
-                  <div className={`absolute inset-0 bg-gradient-to-t ${advantage.color} opacity-20`} />
+                  {/* <div className={`absolute inset-0 bg-gradient-to-t ${advantage.color} opacity-20`} /> */}
                 </div>
               </div>
               <div className="w-full md:w-1/2 space-y-6">

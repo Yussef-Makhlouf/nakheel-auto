@@ -23,7 +23,7 @@ export function About() {
           <div className="grid grid-cols-2 grid-rows-3 gap-4 h-full">
             <div className="row-span-2">
               <Image
-                src="/car1.jpg"
+                src="/square3.png"
                 alt="مجمع النخيل الشامل"
                 width={400}
                 height={500}
@@ -32,7 +32,7 @@ export function About() {
             </div>
             <div>
               <Image
-                src="/images/about-1.jpg"
+                src="/square.png"
                 alt="مجمع النخيل الشامل"
                 width={400}
                 height={250}
@@ -41,7 +41,7 @@ export function About() {
             </div>
             <div>
               <Image
-                src="/images/about-2.jpg"
+                src="/square2.png"
                 alt="مجمع النخيل الشامل"
                 width={400}
                 height={250}
@@ -50,7 +50,16 @@ export function About() {
             </div>
             <div className="row-span-2">
               <Image
-                src="/carr2.jpg"
+                src="/square4.png"
+                alt="مجمع النخيل الشامل"
+                width={400}
+                height={500}
+                className="w-full h-full object-cover rounded-2xl shadow-lg"
+              />
+            </div>
+            <div className="row-span-2">
+              <Image
+                src="/det4.png"
                 alt="مجمع النخيل الشامل"
                 width={400}
                 height={500}

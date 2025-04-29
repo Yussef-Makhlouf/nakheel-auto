@@ -6,14 +6,14 @@ export function Hero() {
   return (
     <section id="hero" className="relative">
       <div className="relative h-[90vh] w-full overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/placeholder.svg?height=1080&width=1920')] bg-cover bg-center bg-no-repeat opacity-90"></div>
+        <div className="absolute inset-0 bg-[url('/cover.png')] bg-cover bg-center bg-no-repeat opacity-90"></div>
         <div className="absolute inset-0 bg-[#0A2F5D]/70"></div>
         <div className="absolute inset-0 bg-[url('/placeholder.svg?height=100&width=100&text=Pattern')] bg-repeat opacity-10"></div>
         <div className="container relative z-10 flex h-full flex-col items-center justify-center text-center text-white">
           <div className="mb-6 flex items-center justify-center">
             <div className="relative h-24 w-24 overflow-hidden rounded-full border-4 border-[#EAB308] p-1">
               <Image
-                src="/placeholder.svg?height=120&width=120"
+                src="/cover.png"
                 alt="شعار مجمع النخيل"
                 width={120}
                 height={120}
@@ -31,17 +31,7 @@ export function Hero() {
             <p className="text-2xl font-bold">مجمع النخيل الشامل لصيانة السيارات</p>
             <p className="text-xl font-medium">Al Nakheel Auto Maintenance Complex</p>
           </div>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Button asChild size="lg" className="bg-[#16A34A] hover:bg-[#16A34A]/90">
-              <Link href="#facilities">المرافق / Facilities</Link>
-            </Button>
-            <Button asChild size="lg" className="bg-[#EAB308] hover:bg-[#EAB308]/90">
-              <Link href="#contact">اتصل بنا / Contact Us</Link>
-            </Button>
-            <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white/20">
-              <Link href="#about">تعرف علينا / About Us</Link>
-            </Button>
-          </div>
+
         </div>
         <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-[#0A2F5D] to-transparent"></div>
       </div>

@@ -44,7 +44,7 @@ export function Facilities() {
             <div className="grid gap-8 md:grid-cols-2">
               <div className="overflow-hidden rounded-2xl shadow-lg">
                 <Image
-                  src="/placeholder.svg?height=500&width=700"
+                  src="/square2.png"
                   alt="مساحات المكاتب والورش"
                   width={700}
                   height={500}
@@ -240,7 +240,7 @@ export function Facilities() {
               </div>
               <div className="order-1 overflow-hidden rounded-2xl shadow-lg md:order-2">
                 <Image
-                  src="/placeholder.svg?height=500&width=700"
+                  src="/det2.png"
                   alt="البنية التحتية للمجمع"
                   width={700}
                   height={500}
@@ -254,7 +254,7 @@ export function Facilities() {
             <div className="grid gap-8 md:grid-cols-2">
               <div className="overflow-hidden rounded-2xl shadow-lg">
                 <Image
-                  src="/placeholder.svg?height=500&width=700"
+                  src="/det7.png"
                   alt="أنظمة الأمن والسلامة"
                   width={700}
                   height={500}
@@ -437,11 +437,11 @@ export function Facilities() {
 
           <div className="relative overflow-hidden rounded-2xl shadow-lg">
             <Image
-              src="/placeholder.svg?height=600&width=1200"
+              src="/struc.png"
               alt="مخطط المجمع"
               width={1200}
               height={600}
-              className="h-full w-full object-cover transition-transform hover:scale-105 duration-500"
+              className="h-full w-full object-cover transition-transform hover:scale-105 duration-500 bg-white"
             />
           </div>
         </div>

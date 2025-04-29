@@ -84,58 +84,68 @@ export function Contact() {
               <div className="grid grid-cols-2 gap-4">
                 <div className="flex flex-col items-center justify-center rounded-lg bg-white p-4 shadow-sm">
                   <Image
-                    src="/partners/partner1.png"
+                    src="/part7.png"
                     alt="Partner 1"
                     width={120}
                     height={80}
                     className="object-contain"
                   />
-                  <p className="mt-2 text-sm font-medium text-gray-700">شريك 1</p>
+                  <p className="mt-2 text-sm font-medium text-gray-700"> درة القمره</p>
                 </div>
                 <div className="flex flex-col items-center justify-center rounded-lg bg-white p-4 shadow-sm">
                   <Image
-                    src="/partners/partner2.png"
+                    src="/part2.png"
                     alt="Partner 2"
                     width={120}
                     height={80}
                     className="object-contain"
                   />
-                  <p className="mt-2 text-sm font-medium text-gray-700">شريك 2</p>
+                  <p className="mt-2 text-sm font-medium text-gray-700">برو ميديا</p>
                 </div>
                 <div className="flex flex-col items-center justify-center rounded-lg bg-white p-4 shadow-sm">
                   <Image
-                    src="/partners/partner3.png"
+                    src="/part3.png"
                     alt="Partner 3"
                     width={120}
                     height={80}
                     className="object-contain"
                   />
-                  <p className="mt-2 text-sm font-medium text-gray-700">شريك 3</p>
+                  <p className="mt-2 text-sm font-medium text-gray-700"> شركة نظم الانشاء و التعمير</p>
                 </div>
                 <div className="flex flex-col items-center justify-center rounded-lg bg-white p-4 shadow-sm">
                   <Image
-                    src="/partners/partner4.png"
+                    src="/part4.png"
                     alt="Partner 4"
                     width={120}
                     height={80}
                     className="object-contain"
                   />
-                  <p className="mt-2 text-sm font-medium text-gray-700">شريك 4</p>
+                  <p className="mt-2 text-sm font-medium text-gray-700"> مكتب م. حسين حسن</p>
+                </div>
+                <div className="flex flex-col items-center justify-center rounded-lg bg-white p-4 shadow-sm">
+                  <Image
+                    src="/part1.png"
+                    alt="Partner 4"
+                    width={120}
+                    height={80}
+                    className="object-contain"
+                  />
+                  <p className="mt-2 text-sm font-medium text-gray-700">الانشاءات الحديديه </p>
                 </div>
               </div>
-            </div>
+            </div>   
           </div>
         </div>
 
         <div className="mt-12">
           <div className="relative h-[300px] w-full overflow-hidden rounded-lg">
             <Image
-              src="/banner.jpg"
+              src="/cover2.png"
               alt="Banner"
               fill
               className="object-cover"
             />
-            <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/50 p-6 text-center text-white">
+            <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/90 p-6 text-center text-white">
               <h2 className="mb-4 text-3xl font-bold"> مجمع النخيل الشامل </h2>
               <p className="text-xl">   أكبر مجمع لمراكز صيانة السيارات بقلب جده</p>
               <Button className="mt-6 bg-[#EAB308] hover:bg-[#EAB308]/90">
