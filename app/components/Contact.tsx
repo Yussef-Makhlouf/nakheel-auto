@@ -33,14 +33,14 @@ export function Contact() {
                   <Phone className="mt-1 h-5 w-5 text-[#0A2F5D]" />
                   <div>
                     <p className="font-medium text-gray-700">الهاتف</p>
-                    <p className="text-sm text-gray-500">+966 12 345 6789</p>
+                    <p className="text-sm text-gray-500">0505740134</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
                   <Mail className="mt-1 h-5 w-5 text-[#0A2F5D]" />
                   <div>
                     <p className="font-medium text-gray-700">البريد الإلكتروني</p>
-                    <p className="text-sm text-gray-500">info@alnakheelauto.com</p>
+                    <p className="text-sm text-gray-500">alqumrah@alqumrah.com</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -62,7 +62,7 @@ export function Contact() {
               </h3>
               <div className="aspect-video w-full overflow-hidden rounded-lg">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3710.444444444444!2d39.12345678901234!3d21.54321098765432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjHCsDMyJzM1LjYiTiAzOcKwMDcnMjQuNSJF!5e0!3m2!1sen!2ssa!4v1234567890"
+                src="https://www.google.com/maps/place/%D9%85%D8%AC%D9%85%D8%B9+%D8%A7%D9%84%D9%86%D8%AE%D9%8A%D9%84+%D8%A7%D9%84%D8%B4%D8%A7%D9%85%D9%84+%D9%84%D8%B5%D9%8A%D8%A7%D9%86%D8%A9+%D8%A7%D9%84%D8%B3%D9%8A%D8%A7%D8%B1%D8%A7%D8%AA%E2%80%AD/@21.5367597,39.247901,17z/data=!3m1!4b1!4m6!3m5!1s0x15c3d3003720dcaf:0x5e57f3e4012ac327!8m2!3d21.5367597!4d39.247901!16s%2Fg%2F11lyz43mx5?entry=ttu&g_ep=EgoyMDI1MDQyMy4wIKXMDSoASAFQAw%3D%3D"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}

@@ -3,6 +3,7 @@ import "@/app/globals.css"
 import type { Metadata } from "next"
 import { Tajawal, Poppins } from "next/font/google"
 import { ThemeProvider } from "@/components/theme-provider"
+import FloatingButtons from "@/components/FloatingButtons"
 
 const tajawal = Tajawal({
   subsets: ["arabic"],
@@ -37,6 +38,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={`${tajawal.variable} ${poppins.variable} font-tajawal`}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
           {children}
+          <FloatingButtons />
         </ThemeProvider>
       </body>
     </html>

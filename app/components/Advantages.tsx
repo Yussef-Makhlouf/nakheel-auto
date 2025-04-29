@@ -85,44 +85,20 @@ export function Advantages() {
       {/* Decorative elements */}
       <CircleDecoration className="absolute -top-16 -left-16" />
       <DotsDecoration className="absolute top-1/4 right-0" />
-      {/* <WaveDecoration className="absolute top-0 left-0" /> */}
-      <CircleDecoration className="absolute -bottom-16 -right-16 rotate-180" />
       
-      <div className="container relative">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="mb-16 text-center relative"
+          className="mb-20 text-center relative"
         >
           <DotsDecoration className="absolute -top-8 left-1/4" />
-          <h2 className="mb-4 text-4xl font-bold text-[#0A2F5D]">أهم مزايا مجمع النخيل الشامل لصيانة السيارات</h2>
-          <p className="text-xl text-[#0A2F5D]/80">The most important advantages of Al Nakheel Autopark Complex</p>
-          <div className="mx-auto mt-4 h-1 w-20 bg-gradient-to-r from-[#EAB308] to-[#F59E0B]"></div>
+          <h2 className="mb-4 text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0A2F5D]">أهم مزايا مجمع النخيل الشامل لصيانة السيارات</h2>
+          <p className="text-lg sm:text-xl text-[#0A2F5D]/80">The most important advantages of Al Nakheel Autopark Complex</p>
         </motion.div>
 
-        {/* Masonry Grid Layout */}
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 relative">
-          <DotsDecoration className="absolute -left-8 top-1/3" />
-          {advantages.map((advantage, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className={`group relative overflow-hidden rounded-lg ${
-                advantage.size === 'large' ? 'md:col-span-2 md:row-span-2' : 
-                advantage.size === 'medium' ? 'md:col-span-1 md:row-span-2' : 
-                'md:col-span-1 md:row-span-1'
-              }`}
-            >
-                    <CircleDecoration className="absolute -bottom-16 -right-16 rotate-180" />
-            </motion.div>
-          ))}
-        </div>
-        <CircleDecoration className="absolute -bottom-16 -right-16 rotate-180" />
-        {/* Content Sections with Images */}
-        <div className="mt-20 space-y-20 relative">
+        <div className="space-y-24 relative">
           <CircleDecoration className="absolute -right-16 top-1/4" />
           {advantages.map((advantage, index) => (
             <motion.div
@@ -130,33 +106,34 @@ export function Advantages() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} gap-8 items-center relative`}
+              className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-12 items-center relative`}
             >
               {index % 2 === 1 && <DotsDecoration className="absolute -left-8 top-1/2" />}
-              <div className="w-full md:w-1/2">
-                <div className="relative h-96 w-full overflow-hidden rounded-lg shadow-xl">
+              <div className="w-full lg:w-1/2">
+                <div className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden rounded-2xl shadow-2xl">
                   <Image
                     src={advantage.image}
                     alt={advantage.title}
                     fill
-                    className="object-cover"
+                    className="object-cover w-full h-full"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    priority={index === 0}
                   />
-                  {/* <div className={`absolute inset-0 bg-gradient-to-t ${advantage.color} opacity-20`} /> */}
                 </div>
               </div>
-              <div className="w-full md:w-1/2 space-y-6">
-                <div className="flex items-center gap-4">
-                  <div className="rounded-full bg-[#0A2F5D]/10 p-3">
-                    <advantage.icon className="h-8 w-8 text-[#0A2F5D]" />
+              <div className="w-full lg:w-1/2 space-y-8">
+                <div className="flex items-center gap-6">
+                  <div className="rounded-full bg-[#0A2F5D]/10 p-4">
+                    <advantage.icon className="h-10 w-10 text-[#0A2F5D]" />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold text-[#0A2F5D]">{advantage.title}</h3>
-                    <p className="text-[#0A2F5D]/80">{advantage.subtitle}</p>
+                    <h3 className="text-2xl sm:text-3xl font-bold text-[#0A2F5D]">{advantage.title}</h3>
+                    <p className="text-lg text-[#0A2F5D]/80">{advantage.subtitle}</p>
                   </div>
                 </div>
-                <div className="space-y-4">
-                  <p className="text-gray-700">{advantage.description}</p>
-                  <p className="text-gray-600">{advantage.descriptionEn}</p>
+                <div className="space-y-6">
+                  <p className="text-lg text-gray-700 leading-relaxed">{advantage.description}</p>
+                  <p className="text-base text-gray-600 leading-relaxed">{advantage.descriptionEn}</p>
                 </div>
               </div>
             </motion.div>
