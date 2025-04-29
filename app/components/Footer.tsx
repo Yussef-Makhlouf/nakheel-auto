@@ -30,7 +30,7 @@ export function Footer() {
             </p>
           </div>
           <div>
-            <h3 className="mb-4 text-lg font-bold text-white">روابط سريعة / Quick Links</h3>
+            <h3 className="mb-4 text-lg font-bold text-white">روابط سريعة </h3>
             <ul className="space-y-2">
               <li>
                 <Link href="#hero" className="text-white/80 hover:text-white">
@@ -65,7 +65,7 @@ export function Footer() {
             </ul>
           </div>
           <div>
-            <h3 className="mb-4 text-lg font-bold text-white">اتصل بنا / Contact Us</h3>
+            <h3 className="mb-4 text-lg font-bold text-white">اتصل بنا</h3>
             <ul className="space-y-4">
               <li className="flex items-start">
                 <MapPin className="ml-2 h-5 w-5 text-[#EAB308]" />
@@ -87,7 +87,7 @@ export function Footer() {
             </ul>
           </div>
           <div>
-            <h3 className="mb-4 text-lg font-bold text-white">تابعنا / Follow Us</h3>
+            <h3 className="mb-4 text-lg font-bold text-white">تابعنا </h3>
             <div className="flex gap-4">
         
               <Link 
@@ -107,7 +107,19 @@ export function Footer() {
               >
                 <Linkedin className="h-6 w-6" />
               </Link>
+
+              <div className="flex flex-col items-center justify-center mt-8">
+          <Image
+            src="/license.png"
+            alt="رخصة البناء مع كود QR"
+            width={220}
+            height={220}
+            className="mx-auto rounded-lg shadow-lg border border-yellow-400  p-2"
+            priority
+          />
+        </div>
             </div>
+  
           </div>
         </div>
         <div className="mt-12 border-t border-white/10 pt-8 text-center">
@@ -115,8 +127,12 @@ export function Footer() {
             &copy; {new Date().getFullYear()} مجمع النخيل الشامل لصيانة السيارات. جميع الحقوق محفوظة.
             <br />
             <span className="text-sm">Al Nakheel Auto Maintenance Complex. All rights reserved.</span>
+            <br />
+            <span className="text-sm">تم تطويره بواسطة القمر الذهبي</span>
+            <br />
           </p>
         </div>
+
       </div>
     </footer>
   )
