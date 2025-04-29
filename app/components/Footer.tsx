@@ -128,7 +128,7 @@ export function Footer() {
             <br />
             <span className="text-sm">Al Nakheel Auto Maintenance Complex. All rights reserved.</span>
             <br />
-            <span className="text-sm">تم تطويره بواسطة القمر الذهبي</span>
+            <span className="text-sm">تم تطويره بواسطة  <span className="text-yellow-400"> القمر الذهبي</span></span>
             <br />
           </p>
         </div>
