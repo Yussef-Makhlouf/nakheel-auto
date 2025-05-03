@@ -99,7 +99,7 @@ export function Contact() {
 
                   <div className="flex items-start gap-4">
                     <div className="bg-white/10 rounded-full p-3 flex-shrink-0">
-                      <Phone className="h-6 w-6 text-accent-400" />
+                      <Phone className="h-6 w-6 text-accent-400 text-white" />
                     </div>
                     <div className="text-white">
                       <h4 className="font-bold mb-1">{t('contact.info.phone')}</h4>
