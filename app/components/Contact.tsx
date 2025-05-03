@@ -89,7 +89,7 @@ export function Contact() {
                 <div className="space-y-8">
                   <div className="flex items-start gap-4">
                     <div className="bg-white/10 rounded-full p-3 flex-shrink-0">
-                      <MapPin className="h-6 w-6 text-accent-400" />
+                      <MapPin className="h-6 w-6 text-accent-400 text-white" />
                     </div>
                     <div className="text-white">
                       <h4 className="font-bold mb-1">{t('contact.info.address')}</h4>
@@ -109,7 +109,7 @@ export function Contact() {
 
                   <div className="flex items-start gap-4">
                     <div className="bg-white/10 rounded-full p-3 flex-shrink-0">
-                      <Mail className="h-6 w-6 text-accent-400" />
+                      <Mail className="h-6 w-6 text-accent-400 text-white" />
                     </div>
                     <div className="text-white">
                       <h4 className="font-bold mb-1">{t('contact.info.email')}</h4>
@@ -119,7 +119,7 @@ export function Contact() {
 
                   <div className="flex items-start gap-4">
                     <div className="bg-white/10 rounded-full p-3 flex-shrink-0">
-                      <Clock className="h-6 w-6 text-accent-400" />
+                      <Clock className="h-6 w-6 text-accent-400 text-white" />
                     </div>
                     <div className="text-white">
                       <h4 className="font-bold mb-1">{t('contact.info.workingHours')}</h4>
