@@ -12,8 +12,13 @@ import { Hero } from "./components/Hero"
 import { About } from "./components/About"
 import { Advantages } from "./components/Advantages"
 import { Facilities } from "./components/Facilities"
-import { Contact } from "./components/Contact"
+
 import { Footer } from "./components/Footer"
+import { FacilitySpecs } from "./components/FacilitySpecs"
+
+import { Partners } from "./components/Partners"
+// import Contact from "@/components/Contact"
+// import { Location } from "./components/Location"
 
 export default function Home() {
   return (
@@ -61,11 +66,15 @@ export default function Home() {
       <main className="flex-1">
 <Header/>
 <Hero/>
-<Advantages />
 <About />
+<Advantages />
 
+
+{/* <FacilitySpecs /> */}
 <Facilities />
-<Contact />
+<Partners />
+{/* <Location /> */}
+{/* <Contact /> */}
 
 
       </main>

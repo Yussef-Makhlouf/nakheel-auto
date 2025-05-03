@@ -4,6 +4,7 @@ import type { Metadata } from "next"
 import { Tajawal, Poppins } from "next/font/google"
 import { ThemeProvider } from "@/components/theme-provider"
 import FloatingButtons from "@/components/FloatingButtons"
+import { getDirection, getFontFamily } from "@/lib/i18n"
 
 const tajawal = Tajawal({
   subsets: ["arabic"],
@@ -29,13 +30,21 @@ export const metadata: Metadata = {
     "Car maintenance Jeddah",
     "Auto workshops Jeddah",
   ],
-    generator: 'v0.dev'
 }
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+  params: { locale },
+}: {
+  children: React.ReactNode
+  params: { locale: string }
+}) {
+  const direction = getDirection(locale as any)
+  const fontFamily = getFontFamily(locale as any)
+
   return (
-    <html lang="ar" dir="rtl" suppressHydrationWarning>
-      <body className={`${tajawal.variable} ${poppins.variable} font-tajawal`}>
+    <html lang={locale} dir={direction} suppressHydrationWarning>
+      <body className={`${tajawal.variable} ${poppins.variable} ${fontFamily} ${direction === 'rtl' ? 'rtl' : 'ltr'}`}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
           {children}
           <FloatingButtons />
@@ -43,4 +52,4 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </body>
     </html>
   )
-}
+} 

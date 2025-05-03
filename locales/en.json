@@ -1,0 +1,192 @@
+{
+  "common": {
+    "home": "Home",
+    "about": "About",
+    "advantages": "Advantages",
+    "facilities": "Facilities",
+    "location": "Location",
+    "contact": "Contact",
+    "menu": "Menu",
+    "close": "Close",
+    "readMore": "Read More",
+    "send": "Send",
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "success": "Success"
+  },
+  "header": {
+    "title": "Al Nakheel Auto Maintenance Complex",
+    "subtitle": "For Car Maintenance"
+  },
+  "hero": {
+    "title": "The Biggest Maintenance and Workshops Centers in the Heart of Jeddah",
+    "description": "We provide comprehensive maintenance services for all types of vehicles with the highest standards of quality and efficiency"
+  },
+  "about": {
+    "title": "About the Project",
+    "description": "Al Nakheel Auto Maintenance Complex is the largest complex of car maintenance centers and workshops in Jeddah, providing comprehensive services for all car maintenance needs",
+    "companyInfo": {
+      "title": "Company Information",
+      "description": "Al-Nakheel Auto Maintenance Complex is the first project of Mozoon Al Motaqadimah Real Estate Company, and it was generally supervised, starting from engineering designs works and supervising construction works until the completion of its construction to the start of leasing and its management by Darat Al-Qamra Consulting and Business Development Company."
+    },
+    "stats": {
+      "totalArea": {
+        "label": "Total Area",
+        "value": "20,500 m²"
+      },
+      "units": {
+        "label": "Units",
+        "value": "Multiple"
+      }
+    },
+    "contact": {
+      "button": "Contact Us"
+    }
+  },
+  "advantages": {
+    "title": "The most important advantages of Al Nakheel Autopark Complex",
+    "location": {
+      "title": "Location",
+      "description": "The location of the site in the center of Jeddah, and easy access to and from all directions north, south, west and east, in addition to the proximity of the site to the residential districts, business centers and spare parts markets in Jeddah."
+    },
+    "licenses": {
+      "title": "Sectors and legal Licenses",
+      "description": "The project is located in a regular area, with all regulatory licenses from Amana as a portfolio for all types of car maintenance, including mechanical, electrical, plumbing and painting works."
+    },
+    "facilities": {
+      "title": "Facilities, offices, parking and ease of movement",
+      "description": "It provides office units for each unit and is equipped with all the special facilities necessary to obtain an integrated, ideal and economical work environment. It provides all logistical needs from large movement spaces, ease of entry and exit, parking lots, cars, large and small trucks, with sufficient spaces allocated for each unit designated as parking lots."
+    },
+    "security": {
+      "title": "Security and firefighting systems & public utilities",
+      "description": "Providing guards and security systems around 24 hours with advanced surveillance cameras to monitor and secure the complex from all sides to ensure a safe and comfortable work environment. Installation of all firefighting equipment and systems with the highest engineering specifications. Availability of all services and infrastructure (electricity, water, sewage and industrial sewage)."
+    }
+  },
+  "facilities": {
+    "title": "Complex Facilities",
+    "items": {
+      "workshops": "Specialized Maintenance Workshops",
+      "spareParts": "Spare Parts Center",
+      "carWash": "Car Wash Service",
+      "tireCenter": "Tire Change Center",
+      "paintShop": "Car Paint Shop",
+      "electronics": "Car Electronics Center"
+    },
+    "sections": {
+      "spaces": {
+        "title": "Spaces",
+        "heading": "Integrated Office and Operational Spaces",
+        "subheading": "Smart Design for All Business Needs",
+        "features": {
+          "office": {
+            "title": "Office units for each unit equipped with all necessary facilities to obtain an integrated, ideal and economical work environment.",
+            "subtitle": "Modern office design providing a comfortable and productive work environment, with consideration for economic aspects and operational efficiency."
+          },
+          "operational": {
+            "title": "Large operational spaces suitable for various types of car maintenance activities (mechanical, electrical, body work, painting).",
+            "subtitle": "Flexible operational space design allowing for dedicated areas for each type of maintenance, while ensuring safety and efficiency requirements."
+          },
+          "parking": {
+            "title": "Parking for cars and large and small trucks, with sufficient spaces allocated for each unit designated as parking lots.",
+            "subtitle": "Comprehensive parking system ensuring smooth traffic flow and organized vehicle access, with appropriate spaces allocated for each vehicle type."
+          }
+        }
+      },
+      "infrastructure": {
+        "title": "Infrastructure",
+        "heading": "Integrated Infrastructure",
+        "subheading": "Advanced Facilities Ensuring Operational Efficiency",
+        "features": {
+          "electricity": {
+            "title": "Advanced electricity network that meets the needs of all types of equipment and devices used in car maintenance workshops.",
+            "subtitle": "Smart electrical system providing stable and sufficient power for all equipment, while maintaining safety and efficiency standards."
+          },
+          "water": {
+            "title": "Integrated water and sewage network that ensures a clean and healthy work environment.",
+            "subtitle": "Comprehensive water and sewage management system ensuring clean water supply and safe waste disposal."
+          },
+          "industrial": {
+            "title": "Specialized industrial drainage system that complies with environmental standards for the safe disposal of car maintenance waste.",
+            "subtitle": "Advanced environmental solutions for industrial waste disposal, maintaining environmental protection and implementing global best practices."
+          }
+        }
+      },
+      "security": {
+        "title": "Security and Safety",
+        "heading": "Advanced Security Systems",
+        "subheading": "Comprehensive Protection for Complex and Staff",
+        "features": {
+          "guards": {
+            "title": "Providing 24-hour security guards and systems to ensure a safe work environment.",
+            "subtitle": "Highly trained security team with integrated monitoring systems to ensure complex security and safety."
+          },
+          "cameras": {
+            "title": "Advanced surveillance cameras to monitor and secure the complex from all sides.",
+            "subtitle": "Comprehensive monitoring system using latest technologies, with full coverage of all complex areas."
+          },
+          "fire": {
+            "title": "Installation of all firefighting equipment and systems with the highest engineering specifications.",
+            "subtitle": "Integrated fire protection system including smoke detectors, fire extinguishers, and early warning systems."
+          }
+        }
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "description": "We are here to answer all your inquiries and provide the information you need",
+    "info": {
+      "title": "Contact Information",
+      "address": "Address",
+      "addressValue": "Khalid bin Yazid Street, Al Nakheel, Jeddah",
+      "phone": "Phone Number",
+      "phoneValue": "0505740134",
+      "email": "Email",
+      "emailValue": "alqumrah@alqumrah.com",
+      "workingHours": "Working Hours",
+      "workingHoursValue": "24/7 - All Week"
+    },
+    "form": {
+      "title": "Send Message",
+      "name": "Name",
+      "namePlaceholder": "Full Name",
+      "email": "Email",
+      "emailPlaceholder": "example@example.com",
+      "phone": "Phone Number",
+      "phonePlaceholder": "0xxxxxxxxx",
+      "message": "Message",
+      "messagePlaceholder": "Tell us how we can help you...",
+      "submit": "Send Message"
+    }
+  },
+  "footer": {
+    "copyright": "All Rights Reserved © Al Nakheel Auto Maintenance Complex",
+    "links": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms and Conditions",
+      "sitemap": "Sitemap"
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Find answers to commonly asked questions about our services and facilities",
+    "questions": {
+      "1": {
+        "question": "What services does Al Nakheel Auto Maintenance Complex offer?",
+        "answer": "We offer comprehensive car maintenance services including general maintenance, engine repair, electrical systems, air conditioning, and more. Our complex is equipped with state-of-the-art facilities and experienced technicians."
+      },
+      "2": {
+        "question": "What are your working hours?",
+        "answer": "Our complex operates from 8:00 AM to 10:00 PM, seven days a week. We are committed to providing flexible service hours to accommodate our customers' needs."
+      },
+      "3": {
+        "question": "Do you accept all car makes and models?",
+        "answer": "Yes, we service all car makes and models. Our technicians are trained to handle various vehicle types and are equipped with the necessary tools and equipment for different car brands."
+      },
+      "4": {
+        "question": "How can I book an appointment?",
+        "answer": "You can book an appointment through our website, mobile app, or by calling our customer service hotline. Walk-ins are also welcome, but appointments are recommended to ensure prompt service."
+      }
+    }
+  }
+} 
