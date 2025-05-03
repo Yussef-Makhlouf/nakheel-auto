@@ -35,7 +35,7 @@ export function SecurityAdvantage({ id, title, description, image }: SecurityAdv
             <div className="bg-[#0A2F5D]/10 p-3 rounded-full">
               <Shield className="text-[#0A2F5D]" size={24} />
             </div>
-            <span className="text-sm font-semibold text-[#EAB308]">{id}</span>
+            {/* <span className="text-sm font-semibold text-[#EAB308]">{id}</span> */}
           </div>
           <h3 className="text-2xl font-bold text-[#0A2F5D] mb-4">{title}</h3>
           <p className="text-gray-600">{description}</p>

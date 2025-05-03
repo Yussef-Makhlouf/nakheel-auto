@@ -23,7 +23,7 @@ export function Facilities() {
       
       <div className="container relative">
         {/* Header */}
-        <motion.div 
+        {/* <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -35,7 +35,7 @@ export function Facilities() {
           </span>
           <h2 className="text-5xl font-bold text-[#0A2F5D] mb-6">{t('facilities.title')}</h2>
           <div className="w-24 h-1.5 bg-gradient-to-r from-[#EAB308] to-[#0A2F5D] mx-auto rounded-full"></div>
-        </motion.div>
+        </motion.div> */}
 
         {/* Tabs Navigation */}
         <div className="flex justify-center mb-20">

@@ -30,9 +30,7 @@ export function FacilitiesAdvantage({ id, title, description, image }: Facilitie
           <p className="text-gray-600 text-base md:text-lg leading-relaxed w-full">
             {description}
           </p>
-          <div className="inline-flex bg-[#EAB308]/10 text-[#EAB308] font-bold px-6 py-3 rounded-full text-sm md:text-base">
-            {id}
-          </div>
+     
         </div>
         <div className="w-full md:w-1/2 flex flex-col md:flex-row gap-4 h-auto md:h-[280px]">
           <div className="relative w-full md:w-1/2 h-[200px] md:h-full overflow-hidden rounded-lg">

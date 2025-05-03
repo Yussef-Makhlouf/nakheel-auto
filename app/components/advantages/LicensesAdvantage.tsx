@@ -29,9 +29,7 @@ export function LicensesAdvantage({ id, title, description, image, locale }: Lic
       className="bg-gradient-to-r from-gray-50 to-white rounded-lg overflow-hidden p-8"
     >
       <div className="flex flex-col items-center rtl mb-8">
-        <span className="inline-block bg-[#0A2F5D] text-white text-sm font-semibold px-3 py-1 rounded-full mb-4">
-          {id}
-        </span>
+   
         <h3 className="text-2xl font-bold text-[#0A2F5D] mb-3 text-center">{title}</h3>
         <p className="text-gray-600 text-center max-w-2xl">{description}</p>
         <div className="flex items-center gap-3 text-[#0A2F5D] mt-4">
