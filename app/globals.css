@@ -106,7 +106,7 @@ html {
 
 /* Custom font classes */
 .font-tajawal {
-  font-family: var(--font-tajawal);
+  font-family: var(--font-tajawal), system-ui, -apple-system, sans-serif;
 }
 
 .font-poppins {

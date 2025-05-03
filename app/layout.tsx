@@ -5,8 +5,9 @@ import "./globals.css"
 const inter = Inter({ subsets: ["latin"] })
 const tajawal = Tajawal({ 
   subsets: ["arabic"],
-  weight: ["200", "300", "400", "500", "700", "800", "900"],
-  variable: '--font-tajawal'
+  weight: ["400", "700"],
+  variable: '--font-tajawal',
+  display: 'swap'
 })
 
 export const metadata: Metadata = {
@@ -21,7 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ar" dir="rtl">
-      <body className={`${inter.className} ${tajawal.variable}`}>
+      <body className={`${inter.className} ${tajawal.variable} font-tajawal`}>
         <div className="flex min-h-screen flex-col bg-white">
           {children}
         </div>
