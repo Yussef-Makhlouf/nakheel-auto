@@ -30,65 +30,68 @@ export function Hero() {
         <div className="absolute inset-0 bg-gradient-to-b from-[#0A2F5D]/80 via-[#0A2F5D]/70 to-[#0A2F5D]/90" />
 
         {/* Main Content */}
-        <div className="container relative z-10 mx-auto flex h-full flex-col items-center justify-between px-4 text-center space-y-12 sm:space-y-16 py-20">
-          {/* Main Title */}
+        <div className="container relative z-10 mx-auto h-full flex flex-col justify-between px-4 py-12 md:py-20">
+          {/* Empty top space */}
+          <div className="flex-grow-0"></div>
+
+          {/* Main Title - Centered */}
           <motion.div 
-            className="max-w-4xl space-y-6 sm:space-y-8 mt-56"
+            className="flex-grow flex items-center justify-center"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
           >
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
-              <span className="block mb-4">{t('hero.title')}</span>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white text-center leading-tight">
+              {t('hero.title')}
             </h1>
-            
-            
           </motion.div>
 
-          {/* CTA Buttons */}
+          {/* CTA Buttons - Bottom */}
           <motion.div 
-            className="mt-12 flex flex-col gap-4"
+            className="flex-grow-0 mt-auto pt-8 sm:pt-12 md:pt-16"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.9 }}
           >
-            <Link 
-              href="https://wa.me/966505740134" 
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full"
-            >
-              <Button size="lg" className="w-full bg-green-500 hover:bg-green-600 text-white rounded-full px-6 sm:px-8 py-5 sm:py-7 text-base sm:text-lg">
-                <MessageCircle className="h-5 w-5 mr-2" />
-                {t('contact.form.submit')}
-              </Button>
-            </Link>
-            <div className="flex flex-row gap-4 w-full">
-              <a href="tel:0505740134" className="w-full">
-                <Button 
-                  size="lg" 
-                  variant="outline" 
-                  className="w-full bg-[#0A2F5D] text-white hover:bg-white hover:text-[#0A2F5D] rounded-full px-8 sm:px-10 py-5 sm:py-7 text-lg sm:text-xl transition-all duration-300 transform hover:scale-105"
-                >
-                  <Phone className="h-6 w-6 mr-3" />
-                  {t('common.contact')}
-                </Button>
-              </a>
+            <div className="flex flex-col gap-6 max-w-3xl mx-auto">
               <Link 
-                href="https://maps.app.goo.gl/xjpM9yGxeVPfzzkY8?g_st=iw" 
+                href="https://wa.me/966505740134" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full"
               >
-                <Button 
-                  size="lg" 
-                  variant="outline" 
-                  className="w-full bg-[#0A2F5D] text-white hover:bg-white hover:text-[#0A2F5D] rounded-full px-8 sm:px-10 py-5 sm:py-7 text-lg sm:text-xl transition-all duration-300 transform hover:scale-105"
-                >
-                  <MapPin className="h-6 w-6 mr-3" />
-                  {t('common.location')}
+                <Button size="lg" className="w-full bg-green-500 hover:bg-green-600 text-white rounded-full px-6 py-4 sm:py-5 text-base sm:text-lg">
+                  <MessageCircle className="h-5 w-5 mr-2" />
+                  {t('contact.form.submit')}
                 </Button>
               </Link>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <a href="tel:0505740134" className="w-full">
+                  <Button 
+                    size="lg" 
+                    variant="outline" 
+                    className="w-full bg-[#0A2F5D] text-white hover:bg-white hover:text-[#0A2F5D] rounded-full px-6 py-4 sm:py-5 text-base sm:text-lg transition-all duration-300 transform hover:scale-105"
+                  >
+                    <Phone className="h-5 w-5 mr-2" />
+                    {t('common.contact')}
+                  </Button>
+                </a>
+                <Link 
+                  href="https://maps.app.goo.gl/xjpM9yGxeVPfzzkY8?g_st=iw" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full"
+                >
+                  <Button 
+                    size="lg" 
+                    variant="outline" 
+                    className="w-full bg-[#0A2F5D] text-white hover:bg-white hover:text-[#0A2F5D] rounded-full px-6 py-4 sm:py-5 text-base sm:text-lg transition-all duration-300 transform hover:scale-105"
+                  >
+                    <MapPin className="h-5 w-5 mr-2" />
+                    {t('common.location')}
+                  </Button>
+                </Link>
+              </div>
             </div>
           </motion.div>
         </div>
