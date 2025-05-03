@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { Inter, Tajawal } from "next/font/google"
 import "./globals.css"
+import { Toaster } from "@/components/ui/toaster"
 
 const inter = Inter({ subsets: ["latin"] })
 const tajawal = Tajawal({ 
@@ -25,8 +26,9 @@ export default function RootLayout({
       <body className={`${inter.className} ${tajawal.variable} font-tajawal`}>
         <div className="flex min-h-screen flex-col bg-white">
           {children}
+          <Toaster />
         </div>
       </body>
     </html>
   )
-} 
+}

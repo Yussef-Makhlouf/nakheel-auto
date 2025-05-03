@@ -7,9 +7,11 @@ import { Textarea } from "@/components/ui/textarea"
 import { MapPin, Phone, Mail, Clock, Send, User, MessageCircle } from "lucide-react"
 import Image from "next/image"
 import { useTranslation } from '@/hooks/useTranslation'
+import { useToast } from "@/hooks/use-toast"
 
 export function Contact() {
   const { t } = useTranslation()
+  const { toast } = useToast()
   const [formState, setFormState] = useState({
     name: '',
     email: '',
@@ -28,7 +30,11 @@ export function Contact() {
     e.preventDefault()
     // Form submission logic would go here
     console.log(formState)
-    alert(t('common.success'))
+    toast({
+      title: t('common.success'),
+      description: t('contact.form.successMessage'),
+      variant: "default",
+    })
   }
 
   return (
@@ -249,4 +255,4 @@ export function Contact() {
       </div>
     </section>
   )
-} 
+}

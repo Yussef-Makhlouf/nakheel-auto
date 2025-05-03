@@ -158,7 +158,9 @@
       "phonePlaceholder": "0xxxxxxxxx",
       "message": "الرسالة",
       "messagePlaceholder": "أخبرنا كيف يمكننا مساعدتك...",
-      "submit": " للحجز و الأستفسار عبر واتساب"
+      "submit": "  أرسل رسالة  ",
+      "success": "تم إرسال الرسالة بنجاح",
+      "error": "حدث خطأ أثناء إرسال الرسالة"
     }
   },
   "footer": {

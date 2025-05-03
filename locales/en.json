@@ -159,7 +159,9 @@
       "phonePlaceholder": "0xxxxxxxxx",
       "message": "Message",
       "messagePlaceholder": "Tell us how we can help you...",
-      "submit": "Send Message"
+      "submit": "Send Message",
+      "success": "Your message has been sent successfully",
+      "error": "An error occurred while sending your message"
     }
   },
   "footer": {
