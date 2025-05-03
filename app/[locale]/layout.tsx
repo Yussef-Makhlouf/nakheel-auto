@@ -44,8 +44,8 @@ export default function RootLayout({
   const fontFamily = getFontFamily(locale as any)
 
   return (
-    <html lang={locale} dir={direction} suppressHydrationWarning>
-      <body className={`${tajawal.variable} ${poppins.variable} ${fontFamily} ${direction === 'rtl' ? 'rtl' : 'ltr'}`}>
+    <html lang={locale} dir={direction} suppressHydrationWarning className="overflow-x-hidden">
+      <body className={`${tajawal.variable} ${poppins.variable} ${fontFamily} ${direction === 'rtl' ? 'rtl' : 'ltr'} overflow-x-hidden`}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
           <div className="flex min-h-screen flex-col bg-white">
             {children}

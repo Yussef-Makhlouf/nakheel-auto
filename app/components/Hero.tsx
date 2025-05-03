@@ -15,7 +15,7 @@ export function Hero() {
   }
 
   return (
-    <section id="hero" className="relative min-h-screen">
+    <section id="hero" className="relative min-h-screen ">
       {/* Background Layers */}
       <div className="relative h-screen w-full overflow-hidden">
         <div className="absolute inset-0">
