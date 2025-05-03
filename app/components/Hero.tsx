@@ -17,7 +17,7 @@ export function Hero() {
   return (
     <section id="hero" className="relative min-h-screen">
       {/* Background Layers */}
-      <div className="relative h-screen w-full overflow-hidden">
+      <div className="relative h-screen w-full  overflow-hidden">
         <div className="absolute inset-0">
           <Image
             src="/cover.png"
@@ -31,13 +31,13 @@ export function Hero() {
 
 
         {/* Main Content */}
-        <div className="container relative z-10 mx-auto flex h-full flex-col items-center justify-center px-4 text-center">
+        <div className="container relative z-10 mx-auto flex h-full flex-col items-center justify-center px-4 text-center space-y-8 sm:space-y-12">
           {/* Logo Animation */}
     
 
           {/* Main Title */}
           <motion.div 
-            className="max-w-5xl space-y-6"
+            className="max-w-5xl space-y-4 sm:space-y-6 pt-16 sm:pt-20"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
@@ -53,7 +53,7 @@ export function Hero() {
 
           {/* Info Cards */}
           <motion.div 
-            className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3 w-full max-w-4xl"
+            className="mt-8 sm:mt-12 grid grid-cols-1 gap-4 sm:gap-6 md:grid-cols-3 w-full max-w-4xl"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6 }}
@@ -115,13 +115,13 @@ export function Hero() {
           </motion.div>
 
           {/* Scroll Indicator */}
-          <motion.div 
+          {/* <motion.div 
             className="absolute bottom-8 left-1/2 -translate-x-1/2"
             animate={{ y: [0, 10, 0] }}
             transition={{ repeat: Infinity, duration: 1.5 }}
           >
             <ChevronDown className="h-8 w-8 text-white opacity-80" />
-          </motion.div>
+          </motion.div> */}
         </div>
 
         {/* Bottom Gradient */}
@@ -129,4 +129,4 @@ export function Hero() {
       </div>
     </section>
   )
-} 
+}

@@ -29,7 +29,9 @@ export default function Home({ params: { locale } }: { params: { locale: string 
     <div className={`flex min-h-screen flex-col bg-white ${direction === 'rtl' ? 'rtl' : 'ltr'}`}>
       <main className="flex-1">
         <Header />
-        <Hero />
+
+ <Hero />
+
         <About />
         <Advantages />
         <Facilities />

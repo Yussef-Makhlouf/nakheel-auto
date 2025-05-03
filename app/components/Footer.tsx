@@ -2,7 +2,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { motion } from "framer-motion"
-import { Facebook, Twitter, Instagram, Mail, Phone, MapPin, Clock, ArrowRight } from "lucide-react"
+import { Facebook, Twitter, Instagram, Mail, Phone, MapPin, Clock, ArrowRight, Linkedin } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { useTranslation } from '@/hooks/useTranslation'
@@ -56,29 +56,28 @@ export function Footer() {
             
             <div className="flex items-center gap-3">
               <Link 
-                href="https://facebook.com" 
+                href="https://www.linkedin.com/in/%D9%85%D8%AC%D9%85%D8%B9-%D8%A7%D9%84%D9%86%D8%AE%D9%8A%D9%84-%D8%A7%D9%84%D8%B4%D8%A7%D9%85%D9%84-%D9%84%D9%85%D8%B1%D8%A7%D9%83%D8%B2-%D8%B5%D9%8A%D8%A7%D9%86%D8%A9-%D8%A7%D9%84%D8%B3%D9%8A%D8%A7%D8%B1%D8%A7%D8%AA-b0b95b362?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" 
                 className="flex items-center justify-center h-10 w-10 rounded-full bg-white/10 hover:bg-accent-500 transition-colors duration-300"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Facebook className="h-5 w-5" />
+                <Linkedin className="h-5 w-5" />
               </Link>
               <Link 
-                href="https://twitter.com" 
+                href="https://x.com/nakheelautopark" 
                 className="flex items-center justify-center h-10 w-10 rounded-full bg-white/10 hover:bg-accent-500 transition-colors duration-300"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Twitter className="h-5 w-5" />
+                <svg 
+                  viewBox="0 0 24 24" 
+                  className="h-5 w-5"
+                  fill="currentColor"
+                >
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                </svg>
               </Link>
-              <Link 
-                href="https://instagram.com" 
-                className="flex items-center justify-center h-10 w-10 rounded-full bg-white/10 hover:bg-accent-500 transition-colors duration-300"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Instagram className="h-5 w-5" />
-              </Link>
+     
             </div>
           </div>
 

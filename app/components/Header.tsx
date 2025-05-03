@@ -138,12 +138,14 @@ export function Header() {
                     </motion.div>
                   ))}
                   <hr className="border-gray-200" />
-                  <Button 
+             <Link href="tel:0505740134">
+             <Button 
                     variant="default"
                     className="w-full bg-[#16A34A] hover:bg-[#15803d] text-white rounded-full"
                   >
                     {t('common.contact')}
                   </Button>
+                  </Link>
                 </nav>
               </SheetContent>
             </Sheet>
