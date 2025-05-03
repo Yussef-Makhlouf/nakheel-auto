@@ -111,9 +111,9 @@ export function Header() {
                 <Button 
                   variant="ghost" 
                   size="icon" 
-                  className="md:hidden hover:bg-gray-100 rounded-full"
+                  className="md:hidden  hover:bg-gray-100 rounded-full"
                 >
-                  <Menu className="h-6 w-6" />
+                  <Menu className="h-6 w-6 text-white" />
                   <span className="sr-only">{t('common.menu')}</span>
                 </Button>
               </SheetTrigger>
