@@ -42,9 +42,9 @@ export function Hero() {
               <span className="block mb-4">{t('hero.title')}</span>
             </h1>
             
-            <p className="text-xl sm:text-2xl md:text-3xl font-semibold text-[#EAB308] leading-relaxed">
+            {/* <p className="text-xl sm:text-2xl md:text-3xl font-semibold text-[#EAB308] leading-relaxed">
               {t('hero.description')}
-            </p>
+            </p> */}
           </motion.div>
 
           {/* CTA Buttons */}
