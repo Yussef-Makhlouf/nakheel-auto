@@ -47,14 +47,20 @@
     }
   },
   "advantages": {
-    "title": "The most important advantages of Al Nakheel Autopark Complex",
+    "title": "Key Advantages of Al Nakheel Auto Maintenance Complex",
     "location": {
       "title": "Location",
-      "description": "The location of the site in the center of Jeddah, and easy access to and from all directions north, south, west and east, in addition to the proximity of the site to the residential districts, business centers and spare parts markets in Jeddah."
+      "description": "Located in the center of Jeddah, with easy access from all directions - north, south, west, and east. The complex is close to major residential areas, business centers, and auto parts markets in Jeddah."
     },
     "licenses": {
-      "title": "Sectors and legal Licenses",
-      "description": "The project is located in a regular area, with all regulatory licenses from Amana as a portfolio for all types of car maintenance, including mechanical, electrical, plumbing and painting works."
+      "title": "Activities and Legal Licenses",
+      "description": "The project is situated in a regulated area, with all necessary organizational licenses from Jeddah Municipality for all types of car maintenance, including mechanical, electrical, bodywork, and painting services.",
+      "services": {
+        "mechanics": "Mechanics",
+        "electrical": "Electrical & AC",
+        "tires": "Tire Services",
+        "bodywork": "Body & Paint"
+      }
     },
     "facilities": {
       "title": "Facilities, offices, parking and ease of movement",

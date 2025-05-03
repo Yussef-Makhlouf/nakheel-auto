@@ -39,7 +39,7 @@ export default function Home({ params: { locale } }: { params: { locale: string 
         
         <Partners />
         <Contact />
-        <FAQ />
+        {/* <FAQ /> */}
       </main>
       <Footer />
     </div>

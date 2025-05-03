@@ -5,6 +5,7 @@ import { Tajawal, Poppins } from "next/font/google"
 import { ThemeProvider } from "@/components/theme-provider"
 import FloatingButtons from "@/components/FloatingButtons"
 import { getDirection, getFontFamily } from "@/lib/i18n"
+import { Toaster } from "@/components/ui/toaster"
 
 const tajawal = Tajawal({
   subsets: ["arabic"],
@@ -46,8 +47,11 @@ export default function RootLayout({
     <html lang={locale} dir={direction} suppressHydrationWarning>
       <body className={`${tajawal.variable} ${poppins.variable} ${fontFamily} ${direction === 'rtl' ? 'rtl' : 'ltr'}`}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
-          {children}
-          <FloatingButtons />
+          <div className="flex min-h-screen flex-col bg-white">
+            {children}
+            <FloatingButtons />
+            <Toaster />
+          </div>
         </ThemeProvider>
       </body>
     </html>

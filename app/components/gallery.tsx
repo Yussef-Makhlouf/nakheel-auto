@@ -3,13 +3,13 @@ import React from "react";
 import styled from "styled-components";
 
 const images = [
-  "/det.png",
+  "/about/square3.png",
   "/det2.png",
-  "/det3.png",
-  "/det4.png",
+  "/about/square2.png",
+  "/about/square1.png",
   "/det5.png",
   "/det6.png",
-  "/cover2.png",
+  "/about/square4.png",
 ];
 
 const GalleryGrid = styled.div`

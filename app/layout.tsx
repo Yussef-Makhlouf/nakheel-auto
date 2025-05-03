@@ -21,14 +21,5 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  return (
-    <html lang="ar" dir="rtl">
-      <body className={`${inter.className} ${tajawal.variable} font-tajawal`}>
-        <div className="flex min-h-screen flex-col bg-white">
-          {children}
-          <Toaster />
-        </div>
-      </body>
-    </html>
-  )
+  return children
 }
