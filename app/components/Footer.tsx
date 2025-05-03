@@ -128,26 +128,26 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Newsletter */}
-          {/* <div className="space-y-6">
-            <h3 className="text-xl font-bold text-white border-r-4 border-accent-500 pr-3">النشرة البريدية</h3>
-            <p className="text-white/70 text-sm">
-              اشترك في نشرتنا البريدية للحصول على آخر الأخبار والعروض الحصرية.
-            </p>
-            
-            <div className="flex flex-col gap-3">
-              <div className="relative">
-                <Input 
-                  type="email" 
-                  placeholder="البريد الإلكتروني" 
-                  className="bg-white/10 border-white/20 rounded-lg text-white focus:border-accent-500"
-                />
+          {/* License QR Code */}
+          <div className="space-y-6">
+            <h3 className="text-xl font-bold text-white border-r-4 border-accent-500 pr-3">{t('common.license')}</h3>
+            <div className="relative group">
+              <div className="absolute -inset-2 bg-gradient-to-r from-[#EAB308]/20 to-[#0A2F5D]/20 rounded-2xl blur-lg opacity-75 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="relative bg-white/10 p-4 rounded-xl border border-white/20 hover:border-accent-500 transition-colors duration-300">
+                <div className="aspect-square w-full relative overflow-hidden rounded-lg">
+                  <Image
+                    src="/license.png"
+                    alt="رخصة مجمع النخيل"
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+                <p className="text-white/70 text-sm text-center mt-4">
+                  {t('common.scan_qr')}
+                </p>
               </div>
-              <Button className="bg-accent-500 hover:bg-accent-600 text-white w-full">
-                اشترك الآن
-              </Button>
             </div>
-          </div> */}
+          </div>
         </div>
 
         {/* Divider */}
@@ -168,4 +168,4 @@ export function Footer() {
       <div className="absolute -right-20 bottom-20 h-60 w-60 bg-secondary-500/10 rounded-full blur-3xl -z-10"></div>
     </footer>
   )
-} 
+}

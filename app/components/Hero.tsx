@@ -17,7 +17,7 @@ export function Hero() {
   return (
     <section id="hero" className="relative min-h-screen">
       {/* Background Layers */}
-      <div className="relative h-screen w-full  overflow-hidden">
+      <div className="relative h-screen w-full overflow-hidden">
         <div className="absolute inset-0">
           <Image
             src="/cover.png"
@@ -29,69 +29,27 @@ export function Hero() {
         </div>
         <div className="absolute inset-0 bg-gradient-to-b from-[#0A2F5D]/80 via-[#0A2F5D]/70 to-[#0A2F5D]/90" />
 
-
         {/* Main Content */}
-        <div className="container relative z-10 mx-auto flex h-full flex-col items-center justify-center px-4 text-center space-y-8 sm:space-y-12">
-          {/* Logo Animation */}
-    
-
+        <div className="container relative z-10 mx-auto flex h-full flex-col items-center justify-center px-4 text-center space-y-12 sm:space-y-16 py-20">
           {/* Main Title */}
           <motion.div 
-            className="max-w-5xl space-y-4 sm:space-y-6 pt-16 sm:pt-20"
+            className="max-w-4xl space-y-6 sm:space-y-8"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
           >
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white">
-              <span className="block mb-2 sm:mb-4">{t('hero.title')}</span>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
+              <span className="block mb-4">{t('hero.title')}</span>
             </h1>
             
-            <p className="text-lg sm:text-xl md:text-2xl font-semibold text-[#EAB308]">
+            <p className="text-xl sm:text-2xl md:text-3xl font-semibold text-[#EAB308] leading-relaxed">
               {t('hero.description')}
             </p>
           </motion.div>
 
-          {/* Info Cards */}
-          <motion.div 
-            className="mt-8 sm:mt-12 grid grid-cols-1 gap-4 sm:gap-6 md:grid-cols-3 w-full max-w-4xl"
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6 }}
-          >
-            <div className="flex items-center gap-4 rounded-2xl bg-white/10 p-4 backdrop-blur-sm">
-              <div className="rounded-full bg-[#EAB308] p-3">
-                <MapPin className="h-6 w-6 text-white" />
-              </div>
-              <div className="text-right">
-                <p className="text-sm sm:text-base font-semibold text-white">{t('common.location')}</p>
-                <p className="text-xs sm:text-sm text-gray-200">{t('contact.info.addressValue')}</p>
-              </div>
-            </div>
-
-            <div className="flex items-center gap-4 rounded-2xl bg-white/10 p-4 backdrop-blur-sm">
-              <div className="rounded-full bg-[#EAB308] p-3">
-                <Phone className="h-6 w-6 text-white" />
-              </div>
-              <div className="text-right">
-                <p className="text-sm sm:text-base font-semibold text-white">{t('common.contact')}</p>
-                <p className="text-xs sm:text-sm text-gray-200">0505740134</p>
-              </div>
-            </div>
-
-            <div className="flex items-center gap-4 rounded-2xl bg-white/10 p-4 backdrop-blur-sm">
-              <div className="rounded-full bg-[#EAB308] p-3">
-                <Clock className="h-6 w-6 text-white" />
-              </div>
-              <div className="text-right">
-                <p className="text-sm sm:text-base font-semibold text-white">{t('contact.info.workingHours')}</p>
-                <p className="text-xs sm:text-sm text-gray-200">24/7</p>
-              </div>
-            </div>
-          </motion.div>
-
           {/* CTA Buttons */}
           <motion.div 
-            className="mt-12 flex flex-col gap-4 sm:flex-row"
+            className="mt-12 flex flex-col gap-4"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.9 }}
@@ -100,28 +58,41 @@ export function Hero() {
               href="https://wa.me/966505740134" 
               target="_blank"
               rel="noopener noreferrer"
+              className="w-full sm:w-auto"
             >
-              <Button size="lg" className="bg-green-500 hover:bg-green-600 text-white rounded-full px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg">
+              <Button size="lg" className="w-full bg-green-500 hover:bg-green-600 text-white rounded-full px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg">
                 <MessageCircle className="h-5 w-5 mr-2" />
                 {t('contact.form.submit')}
               </Button>
             </Link>
-            <a href="tel:0505740134">
-              <Button size="lg" variant="outline" className="bg-[#0A2F5D] text-white hover:bg-white rounded-full px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg">
-                <Phone className="h-5 w-5 mr-2" />
-                {t('common.contact')}
-              </Button>
-            </a>
+            <div className="flex flex-row gap-4">
+              <a href="tel:0505740134" className="w-full sm:w-auto">
+                <Button 
+                  size="lg" 
+                  variant="outline" 
+                  className="w-full sm:w-auto bg-[#0A2F5D] text-white hover:bg-white hover:text-[#0A2F5D] rounded-full px-8 sm:px-10 py-6 text-lg sm:text-xl transition-all duration-300 transform hover:scale-105"
+                >
+                  <Phone className="h-6 w-6 mr-3" />
+                  {t('common.contact')}
+                </Button>
+              </a>
+              <Link 
+                href="https://maps.app.goo.gl/xjpM9yGxeVPfzzkY8?g_st=iw" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto"
+              >
+                <Button 
+                  size="lg" 
+                  variant="outline" 
+                  className="w-full sm:w-auto bg-[#0A2F5D] text-white hover:bg-white hover:text-[#0A2F5D] rounded-full px-8 sm:px-10 py-6 text-lg sm:text-xl transition-all duration-300 transform hover:scale-105"
+                >
+                  <MapPin className="h-6 w-6 mr-3" />
+                  {t('common.location')}
+                </Button>
+              </Link>
+            </div>
           </motion.div>
-
-          {/* Scroll Indicator */}
-          {/* <motion.div 
-            className="absolute bottom-8 left-1/2 -translate-x-1/2"
-            animate={{ y: [0, 10, 0] }}
-            transition={{ repeat: Infinity, duration: 1.5 }}
-          >
-            <ChevronDown className="h-8 w-8 text-white opacity-80" />
-          </motion.div> */}
         </div>
 
         {/* Bottom Gradient */}

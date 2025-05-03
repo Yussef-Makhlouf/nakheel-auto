@@ -12,7 +12,10 @@
     "send": "Send",
     "loading": "Loading...",
     "error": "An error occurred",
-    "success": "Success"
+    "success": "Success",
+    "license": "Licenses",
+
+    "scan_qr": "  scan QR"
   },
   "header": {
     "title": "Al Nakheel ",
