@@ -48,7 +48,7 @@ export function Hero() {
 
           {/* CTA Buttons - Bottom */}
           <motion.div 
-            className="flex-grow-0 mt-auto pt-8 sm:pt-12 md:pt-16"
+            className="flex-grow-0 mt-auto pt-8 sm:pt-12 md:pt-16 row-start-2"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.9 }}
@@ -65,7 +65,7 @@ export function Hero() {
                   {t('contact.form.submit')}
                 </Button>
               </Link>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="flex flex-row gap-4">
                 <a href="tel:0505740134" className="w-full">
                   <Button 
                     size="lg" 
