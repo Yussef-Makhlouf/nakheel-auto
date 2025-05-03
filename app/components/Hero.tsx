@@ -64,7 +64,7 @@ export function Hero() {
               </div>
               <div className="text-right">
                 <p className="text-sm sm:text-base font-semibold text-white">{t('common.location')}</p>
-                <p className="text-xs sm:text-sm text-gray-200">{t('contact.info.address')}</p>
+                <p className="text-xs sm:text-sm text-gray-200">{t('contact.info.addressValue')}</p>
               </div>
             </div>
 
