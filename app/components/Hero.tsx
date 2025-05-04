@@ -32,15 +32,33 @@ export function Hero() {
         {/* Main Content */}
         <div className="container relative z-10 mx-auto h-full flex flex-col justify-between px-4 py-12 md:py-20">
           {/* Empty top space */}
-          <div className="flex-grow-0"></div>
+          {/* <div className="flex-grow-0"></div> */}
+
+          {/* Logo */}
+
 
           {/* Main Title - Centered */}
           <motion.div 
-            className="flex-grow flex items-center justify-center"
+            className="grid-grow grid-cols-1 items-center justify-center"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
           >
+                <motion.div 
+            className="flex-grow-0 flex justify-center mb-6"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+          >
+            <Image
+              src="/logo2.png"
+              alt="Logo"
+              width={380}
+              height={100}
+              className="object-contain pt-20"
+              priority
+            />
+          </motion.div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white text-center leading-tight">
               {t('hero.title')}
             </h1>
