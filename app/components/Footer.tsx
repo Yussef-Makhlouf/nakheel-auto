@@ -146,7 +146,7 @@ export function Footer() {
               
               <div className="flex items-center gap-3">
                 <Mail className="h-5 w-5 text-accent-400" />
-                <p className="text-white">info@nakheelauto.sa</p>
+                <p className="text-white">alqumrah@alqumrah.com</p>
               </div>
               
               <div className="flex items-center gap-3">
