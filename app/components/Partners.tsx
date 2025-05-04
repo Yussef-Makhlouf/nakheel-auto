@@ -39,14 +39,15 @@ export function Partners({ locale = 'en' }: PartnersProps) {
   const t = translations[locale as keyof typeof translations];
   
   const partners: Partner[] = [
-    { name: t.partners.zamil, logo: '/part1.png' },
-    { name: t.partners.promedia, logo: '/part2.png' },
-    { name: t.partners.systems, logo: '/part3.png' },
-    { name: t.partners.alnakheel, logo: '/part4.png' },
-    { name: t.partners.zamil, logo: '/part1.png' },
-    { name: t.partners.promedia, logo: '/part2.png' },
-    { name: t.partners.systems, logo: '/part3.png' },
-    { name: t.partners.alnakheel, logo: '/part4.png' }
+    { name: t.partners.zamil, logo: '/zamel1.png' },
+    { name: t.partners.promedia, logo: '/nozom.png' },
+    { name: t.partners.systems, logo: '/mzon1.png' },
+    { name: t.partners.alnakheel, logo: '/qumra.png' },
+    { name: t.partners.zamil, logo: '/instr.png' },
+    { name: t.partners.promedia, logo: '/nozom.png' },
+    { name: t.partners.systems, logo: '/mzon1.png' },
+    { name: t.partners.alnakheel, logo: '/qumra.png' },
+    { name: t.partners.alnakheel, logo: '/bromed.png' }
   ];
 
   const containerRef = useRef<HTMLDivElement>(null);
@@ -93,8 +94,8 @@ export function Partners({ locale = 'en' }: PartnersProps) {
       <Image
         src={partner.logo}
         alt={partner.name}
-        width={110}
-        height={44}
+        width={150}
+        height={80}
         className="partner-logo"
         priority={copyIndex === 0 && index < 5}
         loading={copyIndex === 0 && index < 5 ? "eager" : "lazy"}
@@ -181,14 +182,15 @@ export function Partners({ locale = 'en' }: PartnersProps) {
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 16px;
+            padding: 20px;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             filter: grayscale(30%);
             opacity: 0.85;
             border-radius: 8px;
             background: rgba(255, 255, 255, 0.5);
             backdrop-filter: blur(4px);
-            min-width: 150px;
+            min-width: 180px;
+            height: 120px;
           }
 
           .partner-item:hover {
@@ -207,6 +209,8 @@ export function Partners({ locale = 'en' }: PartnersProps) {
             transition: transform 0.3s ease;
             max-width: 100%;
             height: auto;
+            width: 150px;
+            height: 80px;
           }
 
           @keyframes scrollPartners {
@@ -230,8 +234,14 @@ export function Partners({ locale = 'en' }: PartnersProps) {
 
           @media (max-width: 768px) {
             .partner-item {
-              padding: 12px;
-              min-width: 120px;
+              padding: 16px;
+              min-width: 160px;
+              height: 100px;
+            }
+            
+            .partner-logo {
+              width: 130px;
+              height: 70px;
             }
             
             .partners-group {

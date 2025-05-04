@@ -79,6 +79,34 @@ export function Footer() {
               </Link>
      
             </div>
+            
+            {/* Company Partners */}
+            <div className="mt-6">
+              {/* <h4 className="text-sm text-white/80 mb-3">{t('common.partners')}</h4> */}
+              <div className="flex items-center gap-4">
+                <div className="bg-white rounded-lg p-3 h-16 w-36">
+                  <div className="relative h-full w-full">
+                    <Image
+                      src="/qumra.png"
+                      alt="Qumra Company"
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                </div>
+                
+                <div className="bg-white rounded-lg p-3 h-16 w-36">
+                  <div className="relative h-full w-full">
+                    <Image
+                      src="/mzon.png"
+                      alt="Mzon Company"
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Quick Links */}

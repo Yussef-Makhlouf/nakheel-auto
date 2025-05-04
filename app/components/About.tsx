@@ -32,7 +32,7 @@ export function About() {
         </motion.div>
 
         {/* Main Content */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
           {/* Left Side: Image Grid */}
           <div className="grid grid-cols-2 gap-4">
             {[1, 2, 3, 4].map((index) => (
@@ -55,47 +55,55 @@ export function About() {
           </div>
 
           {/* Right Side: Content */}
-          <div className="space-y-6">
+          <div className="flex flex-col h-full justify-between">
             {/* Company Info */}
-            <div className="bg-gray-50 rounded-lg p-6">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="h-10 w-10 rounded-lg bg-blue-50 flex items-center justify-center">
-                  <Info className="h-5 w-5 text-blue-600" />
+            <div className="bg-gray-50 rounded-lg p-6 flex-grow">
+              <div className="flex items-center gap-3 mb-5">
+                <div className="h-12 w-12 rounded-lg bg-blue-50 flex items-center justify-center">
+                  <Info className="h-6 w-6 text-blue-600" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900">
+                <h3 className="text-2xl font-semibold text-gray-900">
                   {t('about.companyInfo.title')}
                 </h3>
               </div>
-              <p className="text-gray-700 leading-relaxed">
+              <p className="text-lg text-gray-700 leading-relaxed">
                 {t('about.companyInfo.description')}
               </p>
             </div>
 
-            {/* Project Stats */}
-            <div className="grid grid-cols-2 gap-4">
-              <div className="bg-white rounded-lg p-4 border border-gray-100">
-                <div className="flex items-center gap-3">
-                  <div className="h-10 w-10 rounded-lg bg-emerald-50 flex items-center justify-center">
-                    <Building2 className="h-5 w-5 text-emerald-600" />
-                  </div>
-                  <div>
-                    <p className="text-sm text-gray-600">{t('about.stats.totalArea.label')}</p>
-                    <p className="text-lg font-semibold text-gray-900">{t('about.stats.totalArea.value')}</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-white rounded-lg p-4 border border-gray-100">
-                <div className="flex items-center gap-3">
-                  <div className="h-10 w-10 rounded-lg bg-amber-50 flex items-center justify-center">
-                    <Building2 className="h-5 w-5 text-amber-600" />
-                  </div>
-                  <div>
-                    <p className="text-sm text-gray-600">{t('about.stats.units.label')}</p>
-                    <p className="text-lg font-semibold text-gray-900">{t('about.stats.units.value')}</p>
-                  </div>
-                </div>
-              </div>
+            {/* Company Images */}
+            <div className="grid grid-cols-2 gap-4 my-6">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="relative rounded-lg overflow-hidden border border-gray-100 p-4 flex items-center justify-center bg-white h-24"
+              >
+                <Image
+                  src="/qumra.png"
+                  alt="Qumra Company"
+                  width={180}
+                  height={80}
+                  className="object-contain"
+                />
+              </motion.div>
+              
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="relative rounded-lg overflow-hidden border border-gray-100 p-4 flex items-center justify-center bg-white h-24"
+              >
+                <Image
+                  src="/mzon.png"
+                  alt="Mzon Company"
+                  width={180}
+                  height={80}
+                  className="object-contain"
+                />
+              </motion.div>
             </div>
 
             {/* Contact Button */}
