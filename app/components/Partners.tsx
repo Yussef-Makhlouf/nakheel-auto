@@ -4,18 +4,15 @@ import { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 
 interface Partner {
-  name: string;
-  logo: string;
+  name: string
+  logo: string
 }
 
 interface PartnersProps {
-  locale?: string;
+  locale?: string
 }
 
 export function Partners({ locale = 'en' }: PartnersProps) {
-  const [animationSpeed, setAnimationSpeed] = useState(20);
-  const [duplicates, setDuplicates] = useState(4);
-  
   const translations = {
     en: {
       title: 'Success Partners',
@@ -23,8 +20,8 @@ export function Partners({ locale = 'en' }: PartnersProps) {
         zamil: 'Zamil Steel',
         promedia: 'Promedia',
         systems: 'Construction Systems',
-        alnakheel: 'Al Nakheel Auto Maintenance Complex'
-      }
+        alnakheel: 'Al Nakheel Auto Maintenance Complex',
+      },
     },
     ar: {
       title: 'شركاء النجاح',
@@ -32,13 +29,13 @@ export function Partners({ locale = 'en' }: PartnersProps) {
         zamil: 'زامل ستيل',
         promedia: 'بروميديا',
         systems: 'نظم الإنشاء',
-        alnakheel: 'مجمع النخيل الشامل لصيانة السيارات'
-      }
-    }
-  };
+        alnakheel: 'مجمع النخيل الشامل لصيانة السيارات',
+      },
+    },
+  }
 
-  const t = translations[locale as keyof typeof translations];
-  
+  const t = translations[locale as keyof typeof translations]
+
   const partners: Partner[] = [
     { name: t.partners.zamil, logo: '/zamel1.png' },
     { name: t.partners.promedia, logo: '/nozom.png' },
@@ -48,59 +45,11 @@ export function Partners({ locale = 'en' }: PartnersProps) {
     { name: t.partners.promedia, logo: '/nozom.png' },
     { name: t.partners.systems, logo: '/mzon1.png' },
     { name: t.partners.alnakheel, logo: '/qumra.png' },
-    { name: t.partners.alnakheel, logo: '/bromed.png' }
-  ];
+    { name: t.partners.alnakheel, logo: '/bromed.png' },
+  ]
 
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const calculateSettings = () => {
-      if (!containerRef.current) return;
-      
-      const containerWidth = window.innerWidth;
-      const logosWidth = containerRef.current.scrollWidth / partners.length;
-      
-      // Calculate how many duplicates needed to ensure smooth infinite scrolling
-      const requiredDuplicates = Math.ceil((containerWidth * 4) / (logosWidth * partners.length));
-      setDuplicates(Math.max(4, requiredDuplicates));
-      
-      // Adjust animation speed based on screen width
-      const baseSpeed = 30; // Slower base speed for smoother movement
-      const speedFactor = Math.min(1.2, Math.max(0.8, containerWidth / 1200));
-      setAnimationSpeed(baseSpeed * speedFactor);
-    };
-    
-    // Initial calculation with slight delay to ensure DOM is ready
-    const timer = setTimeout(calculateSettings, 100);
-    
-    // Recalculate on resize
-    window.addEventListener('resize', calculateSettings);
-    
-    return () => {
-      clearTimeout(timer);
-      window.removeEventListener('resize', calculateSettings);
-    };
-  }, [partners.length]);
-
-  const renderPartnerLogo = (partner: Partner, index: number, copyIndex: number) => (
-    <div 
-      key={`partner-${copyIndex}-${index}`} 
-      className="partner-item"
-      title={partner.name}
-      role="img"
-      aria-label={partner.name}
-    >
-      <Image
-        src={partner.logo}
-        alt={partner.name}
-        width={150}
-        height={80}
-        className="partner-logo"
-        priority={copyIndex === 0 && index < 5}
-        loading={copyIndex === 0 && index < 5 ? "eager" : "lazy"}
-      />
-    </div>
-  );
+  // Duplicate list once for smooth looping
+  const scrollingPartners = [...partners, ...partners]
 
   return (
     <section className="py-16 bg-white overflow-hidden" aria-label={t.title}>
@@ -115,30 +64,27 @@ export function Partners({ locale = 'en' }: PartnersProps) {
           </div>
         </div>
 
-        <div className="partners-carousel-container">
-          <div 
-            className="partners-carousel"
-            style={{ '--speed': `${animationSpeed}s` } as React.CSSProperties}
-            dir={locale === 'ar' ? 'rtl' : 'ltr'}
-          >
-            <div ref={containerRef} className="carousel-track">
-              {Array.from({ length: duplicates }).map((_, copyIndex) => (
-                <div key={`copy-${copyIndex}`} className="partners-group">
-                  {partners.map((partner, partnerIndex) => 
-                    renderPartnerLogo(partner, partnerIndex, copyIndex)
-                  )}
-                </div>
-              ))}
-            </div>
-            <div className="carousel-track" aria-hidden="true">
-              {Array.from({ length: duplicates }).map((_, copyIndex) => (
-                <div key={`copy-shadow-${copyIndex}`} className="partners-group">
-                  {partners.map((partner, partnerIndex) => 
-                    renderPartnerLogo(partner, partnerIndex, copyIndex + duplicates)
-                  )}
-                </div>
-              ))}
-            </div>
+        <div className="partners-carousel-container" dir={locale === 'ar' ? 'rtl' : 'ltr'}>
+          <div className="partners-carousel">
+            {scrollingPartners.map((partner, i) => (
+              <div
+                key={`partner-${i}`}
+                className="partner-item"
+                title={partner.name}
+                role="img"
+                aria-label={partner.name}
+              >
+                <Image
+                  src={partner.logo}
+                  alt={partner.name}
+                  width={150}
+                  height={80}
+                  className="partner-logo"
+                  priority={i < 5}
+                  loading={i < 5 ? 'eager' : 'lazy'}
+                />
+              </div>
+            ))}
           </div>
         </div>
 
@@ -147,29 +93,13 @@ export function Partners({ locale = 'en' }: PartnersProps) {
             width: 100%;
             overflow: hidden;
             position: relative;
-            margin: 0 auto;
           }
 
           .partners-carousel {
             display: flex;
-            width: 100%;
-            animation: scrollPartners var(--speed, 30s) linear infinite;
-            will-change: transform;
-          }
-
-          .partners-carousel.paused {
-            animation-play-state: running;
-          }
-
-          .carousel-track {
-            display: flex;
-            flex-shrink: 0;
             gap: 40px;
-          }
-
-          .partners-group {
-            display: flex;
-            gap: 40px;
+            animation: scrollLinear 60s linear infinite;
+            width: max-content;
           }
 
           .partner-item {
@@ -178,7 +108,6 @@ export function Partners({ locale = 'en' }: PartnersProps) {
             align-items: center;
             justify-content: center;
             padding: 20px;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             filter: grayscale(30%);
             opacity: 0.85;
             border-radius: 8px;
@@ -186,6 +115,7 @@ export function Partners({ locale = 'en' }: PartnersProps) {
             backdrop-filter: blur(4px);
             min-width: 180px;
             height: 120px;
+            transition: all 0.3s ease;
           }
 
           .partner-item:hover {
@@ -199,16 +129,13 @@ export function Partners({ locale = 'en' }: PartnersProps) {
           }
 
           .partner-logo {
-            display: block;
             object-fit: contain;
-            transition: transform 0.3s ease;
             max-width: 100%;
-            height: auto;
             width: 150px;
             height: 80px;
           }
 
-          @keyframes scrollPartners {
+          @keyframes scrollLinear {
             0% {
               transform: translateX(0);
             }
@@ -217,14 +144,8 @@ export function Partners({ locale = 'en' }: PartnersProps) {
             }
           }
 
-          [dir="rtl"] .partners-carousel {
+          [dir='rtl'] .partners-carousel {
             animation-direction: reverse;
-          }
-
-          @media (prefers-reduced-motion: reduce) {
-            .partners-carousel {
-              animation: scrollPartners var(--speed, 30s) linear infinite;
-            }
           }
 
           @media (max-width: 768px) {
@@ -233,17 +154,13 @@ export function Partners({ locale = 'en' }: PartnersProps) {
               min-width: 160px;
               height: 100px;
             }
-            
+
             .partner-logo {
               width: 130px;
               height: 70px;
             }
-            
-            .partners-group {
-              gap: 30px;
-            }
 
-            .carousel-track {
+            .partners-carousel {
               gap: 30px;
             }
           }
@@ -251,4 +168,4 @@ export function Partners({ locale = 'en' }: PartnersProps) {
       </div>
     </section>
   )
-} 
+}
