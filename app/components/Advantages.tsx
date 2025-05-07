@@ -16,6 +16,8 @@ export function Advantages() {
       id: "01",
       title: t('advantages.location.title'),
       description: t('advantages.location.description'),
+      description2: "",
+      description3: "",
       icon: MapPin,
       image: "/map.png"
     },
@@ -23,6 +25,8 @@ export function Advantages() {
       id: "02",
       title: t('advantages.licenses.title'),
       description: t('advantages.licenses.description'),
+      description2: "",
+      description3: "",
       icon: FileText,
       image: "/det6.png"
     },
@@ -30,6 +34,8 @@ export function Advantages() {
       id: "03",
       title: t('advantages.facilities.title'),
       description: t('advantages.facilities.description'),
+      description2: t('advantages.facilities.description2'),
+      description3: "",
       icon: Building,
       image: "/det5.png"
     },
@@ -37,6 +43,8 @@ export function Advantages() {
       id: "04",
       title: t('advantages.security.title'),
       description: t('advantages.security.description'),
+      description2: t('advantages.security.description2'),
+      description3: t('advantages.security.description3'),
       icon: Shield,
       image: "/det7.png"
     }

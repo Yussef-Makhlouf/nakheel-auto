@@ -3,7 +3,7 @@ import Image from "next/image"
 import Link from "next/link"
 import {  Menu, Phone } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet"
 import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import { useTranslation } from '@/hooks/useTranslation'
@@ -121,6 +121,7 @@ export function Header() {
                 side="right" 
                 className="w-[300px] bg-white/95 backdrop-blur-md"
               >
+                <SheetTitle className="sr-only">{t('common.menu')}</SheetTitle>
                 <nav className="mt-8 flex flex-col gap-6">
                   {navLinks.map((link) => (
                     <motion.div

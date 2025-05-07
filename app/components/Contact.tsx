@@ -58,7 +58,7 @@ export function Contact() {
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Section header */}
-        <motion.div 
+        {/* <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -72,7 +72,7 @@ export function Contact() {
             {t('contact.description')}
           </p>
           <div className="h-1 w-24 bg-gradient-to-r from-accent-400 to-secondary-400 mx-auto mt-6 rounded-full"></div>
-        </motion.div>
+        </motion.div> */}
 
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12">
           {/* Contact Info Card - 2 cols */}

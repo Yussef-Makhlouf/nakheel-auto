@@ -8,10 +8,12 @@ interface SecurityAdvantageProps {
   id: string
   title: string
   description: string
+  description2: string
+  description3: string
   image?: string
 }
 
-export function SecurityAdvantage({ id, title, description, image }: SecurityAdvantageProps) {
+export function SecurityAdvantage({ id, title, description, description2, description3, image }: SecurityAdvantageProps) {
   // Predefined security images from public directory
   const securityImages = [
     "/det7.png",
@@ -38,7 +40,11 @@ export function SecurityAdvantage({ id, title, description, image }: SecurityAdv
             {/* <span className="text-sm font-semibold text-[#EAB308]">{id}</span> */}
           </div>
           <h3 className="text-2xl font-bold text-[#0A2F5D] mb-4">{title}</h3>
-          <p className="text-gray-600">{description}</p>
+          <p className="text-gray-600 mb-3">{description}</p>
+          
+          <p className="text-gray-600 mb-3">{description2}</p>
+          
+          <p className="text-gray-600">{description3}</p>
         </div>
         
         <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-5 sm:gap-4">

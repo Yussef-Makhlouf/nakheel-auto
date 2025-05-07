@@ -27,41 +27,44 @@ export function Hero() {
             priority
           />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0A2F5D]/80 via-[#0A2F5D]/70 to-[#0A2F5D]/90" />
-
+        <div className="absolute inset-0 bg-blue-900 bg-opacity-50 flex flex-col items-center justify-center"/>
         {/* Main Content */}
-        <div className="container relative z-10 mx-auto h-full flex flex-col justify-between px-4 py-12 md:py-20">
-          {/* Empty top space */}
-          {/* <div className="flex-grow-0"></div> */}
-
-          {/* Logo */}
-
+        <div className="container relative z-10 mx-auto h-full flex flex-col justify-between px-4 py-12 md:py-12">
+      
 
           {/* Main Title - Centered */}
           <motion.div 
-            className="grid-grow grid-cols-1 items-center justify-center"
+            className="flex flex-col items-center justify-center flex-grow text-center"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
           >
-                <motion.div 
-            className="flex-grow-0 flex justify-center mb-6"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-          >
-            <Image
-              src="/logo2.png"
-              alt="Logo"
-              width={380}
-              height={100}
-              className="object-contain pt-20"
-              priority
-            />
-          </motion.div>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white text-center leading-tight">
-              {t('hero.title')}
-            </h1>
+            <motion.div 
+              className="flex justify-center mb-8"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+            >
+              <Image
+                src="/logo2.png"
+                alt="Logo"
+                width={450}
+                height={120}
+                className="object-contain mt-5"
+                priority
+              />
+            </motion.div>
+            <div className="space-y-6">
+              <h2 className="text-4xl sm:text-5xl md:text-4xl font-bold text-white text-center  [text-shadow:_2px_2px_0px_#000000]">
+                {t('hero.title')}
+              </h2>
+              <h4 className="text-4xl sm:text-xl md:text-4xl font-bold text-white [text-shadow:_2px_2px_0px_#000000] text-center">
+                {t('hero.title2')}
+              </h4>
+              <h1 className="text-5xl sm:text-3xl md:text-5xl font-bold text-lime-400 text-center [text-shadow:_2px_2px_0px_#000000]">
+                {t('hero.subtitle')}
+              </h1>
+            </div>
           </motion.div>
 
           {/* CTA Buttons - Bottom */}

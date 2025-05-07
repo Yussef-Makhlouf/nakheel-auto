@@ -34,7 +34,7 @@ export default function Home({ params: { locale } }: { params: { locale: string 
 
         <About />
         <Advantages />
-        <Facilities />
+        {/* <Facilities /> */}
         {/* <Gallery /> */}
         
         <Partners />

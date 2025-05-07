@@ -23,9 +23,9 @@ export function About() {
           variants={fadeIn}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-[#0A2F5D] mb-4">
+          {/* <h2 className="text-3xl md:text-4xl font-bold text-[#0A2F5D] mb-4">
             {t('about.title')}
-          </h2>
+          </h2> */}
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             {t('about.description')}
           </p>

@@ -8,10 +8,11 @@ interface FacilitiesAdvantageProps {
   id: string
   title: string
   description: string
+  description2: string
   image: string
 }
 
-export function FacilitiesAdvantage({ id, title, description, image }: FacilitiesAdvantageProps) {
+export function FacilitiesAdvantage({ id, title, description,description2, image }: FacilitiesAdvantageProps) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -28,9 +29,22 @@ export function FacilitiesAdvantage({ id, title, description, image }: Facilitie
             </h3>
           </div>
           <p className="text-gray-600 text-base md:text-lg leading-relaxed w-full">
-            {description}
+            {description.split('.').map((sentence, index) => (
+              <span key={index}>
+                {sentence}{index < description.split('.').length - 1 ? '.' : ''}
+                {index < description.split('.').length - 1 && <br />}
+              </span>
+            ))}
           </p>
-     
+          <p className="text-gray-600 text-base md:text-lg leading-relaxed w-full">
+            {description2.split('.').map((sentence, index) => (
+              <span key={index}>
+                {sentence}{index < description2.split('.').length - 1 ? '.' : ''}
+                {index < description2.split('.').length - 1 && <br />}
+              </span>
+            ))}
+          </p>
+
         </div>
         <div className="w-full md:w-1/2 flex flex-col md:flex-row gap-4 h-auto md:h-[280px]">
           <div className="relative w-full md:w-1/2 h-[200px] md:h-full overflow-hidden rounded-lg">

@@ -22,7 +22,9 @@
     "subtitle": "For Car Maintenance"
   },
   "hero": {
-    "title": " start renting in The Biggest Maintenance and Workshops Centers in the Heart of Jeddah",
+    "title": "The Latest Complex",
+    "title2": "For Car Maintenance",
+    "subtitle": "In the Heart of Jeddah",
     "description": "We provide comprehensive maintenance services for all types of vehicles with the highest standards of quality and efficiency"
   },
   "about": {
@@ -64,11 +66,15 @@
     },
     "facilities": {
       "title": "Facilities, offices, parking and ease of movement",
-      "description": "It provides office units for each unit and is equipped with all the special facilities necessary to obtain an integrated, ideal and economical work environment. It provides all logistical needs from large movement spaces, ease of entry and exit, parking lots, cars, large and small trucks, with sufficient spaces allocated for each unit designated as parking lots."
+      "description": "It provides office units for each unit and is equipped with all the special facilities necessary to obtain an integrated, ideal and economical work environment.",
+      "description2": "It provides all logistical needs from large movement spaces, ease of entry and exit, parking lots, cars, large and small trucks, with sufficient spaces allocated for each unit designated as parking lots."
     },
     "security": {
       "title": "Security and firefighting systems & public utilities",
-      "description": "Providing guards and security systems around 24 hours with advanced surveillance cameras to monitor and secure the complex from all sides to ensure a safe and comfortable work environment. Installation of all firefighting equipment and systems with the highest engineering specifications. Availability of all services and infrastructure (electricity, water, sewage and industrial sewage)."
+      "description": "Providing guards and security systems around 24 hours with advanced surveillance cameras to monitor and secure the complex from all sides to ensure a safe and comfortable work environment.",
+
+      "description2": "Installing all firefighting equipment and systems with the highest engineering specifications.",
+      "description3": "Providing all services and infrastructure (electricity, water, sewage and industrial sewage)."
     }
   },
   "facilities": {
