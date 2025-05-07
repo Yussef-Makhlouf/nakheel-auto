@@ -26,8 +26,8 @@ export function Header() {
     { href: "#hero", label: t('common.home') },
     { href: "#about", label: t('common.about') },
     { href: "#advantages", label: t('common.advantages') },
-    { href: "#facilities", label: t('common.facilities') },
-    { href: "#location", label: t('common.location') },
+ 
+    { href: "#footer", label: t('common.location') },
     { href: "#contact", label: t('common.contact') },
   ]
 

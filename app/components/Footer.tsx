@@ -12,7 +12,7 @@ export function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="relative bg-[#0a2f5d] text-white overflow-hidden">
+    <footer className="relative bg-[#0a2f5d] text-white overflow-hidden" id="footer">
       {/* Top wave decoration */}
       {/* <div className="absolute top-0 left-0 right-0 h-16 overflow-hidden">
         <svg 
