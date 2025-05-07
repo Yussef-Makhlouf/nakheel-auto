@@ -13,7 +13,8 @@ interface PartnersProps {
 }
 
 export function Partners({ locale = 'en' }: PartnersProps) {
-  const [isPaused, setIsPaused] = useState(false);
+  const [animationSpeed, setAnimationSpeed] = useState(20);
+  const [duplicates, setDuplicates] = useState(4);
   
   const translations = {
     en: {
@@ -51,8 +52,6 @@ export function Partners({ locale = 'en' }: PartnersProps) {
   ];
 
   const containerRef = useRef<HTMLDivElement>(null);
-  const [animationSpeed, setAnimationSpeed] = useState(20);
-  const [duplicates, setDuplicates] = useState(4);
 
   useEffect(() => {
     const calculateSettings = () => {
@@ -66,7 +65,7 @@ export function Partners({ locale = 'en' }: PartnersProps) {
       setDuplicates(Math.max(4, requiredDuplicates));
       
       // Adjust animation speed based on screen width
-      const baseSpeed = 20; // Faster base speed
+      const baseSpeed = 30; // Slower base speed for smoother movement
       const speedFactor = Math.min(1.2, Math.max(0.8, containerWidth / 1200));
       setAnimationSpeed(baseSpeed * speedFactor);
     };
@@ -118,11 +117,7 @@ export function Partners({ locale = 'en' }: PartnersProps) {
 
         <div className="partners-carousel-container">
           <div 
-            className={`partners-carousel ${isPaused ? 'paused' : ''}`}
-            onMouseEnter={() => setIsPaused(true)}
-            onMouseLeave={() => setIsPaused(false)}
-            onFocus={() => setIsPaused(true)}
-            onBlur={() => setIsPaused(false)}
+            className="partners-carousel"
             style={{ '--speed': `${animationSpeed}s` } as React.CSSProperties}
             dir={locale === 'ar' ? 'rtl' : 'ltr'}
           >
@@ -158,12 +153,12 @@ export function Partners({ locale = 'en' }: PartnersProps) {
           .partners-carousel {
             display: flex;
             width: 100%;
-            animation: scrollPartners var(--speed, 20s) linear infinite;
+            animation: scrollPartners var(--speed, 30s) linear infinite;
             will-change: transform;
           }
 
           .partners-carousel.paused {
-            animation-play-state: paused;
+            animation-play-state: running;
           }
 
           .carousel-track {
@@ -228,7 +223,7 @@ export function Partners({ locale = 'en' }: PartnersProps) {
 
           @media (prefers-reduced-motion: reduce) {
             .partners-carousel {
-              animation: none;
+              animation: scrollPartners var(--speed, 30s) linear infinite;
             }
           }
 
