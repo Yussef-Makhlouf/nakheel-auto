@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
+import Marquee from 'react-fast-marquee'
 
 interface Partner {
   name: string;
@@ -13,9 +14,6 @@ interface PartnersProps {
 }
 
 export function Partners({ locale = 'en' }: PartnersProps) {
-  const [animationSpeed, setAnimationSpeed] = useState(20);
-  const [duplicates, setDuplicates] = useState(4);
-  
   const translations = {
     en: {
       title: 'Success Partners',
@@ -51,40 +49,9 @@ export function Partners({ locale = 'en' }: PartnersProps) {
     { name: t.partners.alnakheel, logo: '/bromed.png' }
   ];
 
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const calculateSettings = () => {
-      if (!containerRef.current) return;
-      
-      const containerWidth = window.innerWidth;
-      const logosWidth = containerRef.current.scrollWidth / partners.length;
-      
-      // Calculate how many duplicates needed to ensure smooth infinite scrolling
-      const requiredDuplicates = Math.ceil((containerWidth * 4) / (logosWidth * partners.length));
-      setDuplicates(Math.max(4, requiredDuplicates));
-      
-      // Adjust animation speed based on screen width
-      const baseSpeed = 30; // Slower base speed for smoother movement
-      const speedFactor = Math.min(1.2, Math.max(0.8, containerWidth / 1200));
-      setAnimationSpeed(baseSpeed * speedFactor);
-    };
-    
-    // Initial calculation with slight delay to ensure DOM is ready
-    const timer = setTimeout(calculateSettings, 100);
-    
-    // Recalculate on resize
-    window.addEventListener('resize', calculateSettings);
-    
-    return () => {
-      clearTimeout(timer);
-      window.removeEventListener('resize', calculateSettings);
-    };
-  }, [partners.length]);
-
-  const renderPartnerLogo = (partner: Partner, index: number, copyIndex: number) => (
+  const renderPartnerLogo = (partner: Partner, index: number) => (
     <div 
-      key={`partner-${copyIndex}-${index}`} 
+      key={`partner-${index}`} 
       className="partner-item"
       title={partner.name}
       role="img"
@@ -96,8 +63,8 @@ export function Partners({ locale = 'en' }: PartnersProps) {
         width={150}
         height={80}
         className="partner-logo"
-        priority={copyIndex === 0 && index < 5}
-        loading={copyIndex === 0 && index < 5 ? "eager" : "lazy"}
+        priority={index < 5}
+        loading={index < 5 ? "eager" : "lazy"}
       />
     </div>
   );
@@ -116,30 +83,16 @@ export function Partners({ locale = 'en' }: PartnersProps) {
         </div>
 
         <div className="partners-carousel-container">
-          <div 
-            className="partners-carousel"
-            style={{ '--speed': `${animationSpeed}s` } as React.CSSProperties}
-            dir={locale === 'ar' ? 'rtl' : 'ltr'}
+          <Marquee
+            gradient={false}
+            speed={40}
+            direction={locale === 'ar' ? 'right' : 'left'}
+            pauseOnHover={false}
           >
-            <div ref={containerRef} className="carousel-track">
-              {Array.from({ length: duplicates }).map((_, copyIndex) => (
-                <div key={`copy-${copyIndex}`} className="partners-group">
-                  {partners.map((partner, partnerIndex) => 
-                    renderPartnerLogo(partner, partnerIndex, copyIndex)
-                  )}
-                </div>
-              ))}
+            <div className="partners-group">
+              {partners.map((partner, index) => renderPartnerLogo(partner, index))}
             </div>
-            <div className="carousel-track" aria-hidden="true">
-              {Array.from({ length: duplicates }).map((_, copyIndex) => (
-                <div key={`copy-shadow-${copyIndex}`} className="partners-group">
-                  {partners.map((partner, partnerIndex) => 
-                    renderPartnerLogo(partner, partnerIndex, copyIndex + duplicates)
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
+          </Marquee>
         </div>
 
         <style jsx>{`
@@ -150,26 +103,10 @@ export function Partners({ locale = 'en' }: PartnersProps) {
             margin: 0 auto;
           }
 
-          .partners-carousel {
-            display: flex;
-            width: 100%;
-            animation: scrollPartners var(--speed, 30s) linear infinite;
-            will-change: transform;
-          }
-
-          .partners-carousel.paused {
-            animation-play-state: running;
-          }
-
-          .carousel-track {
-            display: flex;
-            flex-shrink: 0;
-            gap: 40px;
-          }
-
           .partners-group {
             display: flex;
             gap: 40px;
+            padding: 0 20px;
           }
 
           .partner-item {
@@ -208,25 +145,6 @@ export function Partners({ locale = 'en' }: PartnersProps) {
             height: 80px;
           }
 
-          @keyframes scrollPartners {
-            0% {
-              transform: translateX(0);
-            }
-            100% {
-              transform: translateX(-50%);
-            }
-          }
-
-          [dir="rtl"] .partners-carousel {
-            animation-direction: reverse;
-          }
-
-          @media (prefers-reduced-motion: reduce) {
-            .partners-carousel {
-              animation: scrollPartners var(--speed, 30s) linear infinite;
-            }
-          }
-
           @media (max-width: 768px) {
             .partner-item {
               padding: 16px;
@@ -240,10 +158,6 @@ export function Partners({ locale = 'en' }: PartnersProps) {
             }
             
             .partners-group {
-              gap: 30px;
-            }
-
-            .carousel-track {
               gap: 30px;
             }
           }
