@@ -53,7 +53,7 @@ export function Hero() {
               transition={{ delay: 0.1 }}
             >
               <Image
-                src="/newlogo.png"
+                src="/newlogo1.png"
                 alt="Logo"
                 width={250}
                 height={200}
