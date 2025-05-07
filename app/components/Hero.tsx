@@ -34,27 +34,27 @@ export function Hero() {
 
           {/* Main Title - Centered */}
           <motion.div 
-            className="flex flex-col items-center justify-center flex-grow text-center"
-            initial={{ opacity: 0, y: 30 }}
+            className="flex flex-col items-center text-center pt-4"
+            initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
+            transition={{ delay: 0.2 }}
           >
             <motion.div 
-              className="flex justify-center mb-8"
-              initial={{ opacity: 0, y: 20 }}
+              className="flex justify-center mb-2"
+              initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
+              transition={{ delay: 0.1 }}
             >
               <Image
                 src="/logo2.png"
                 alt="Logo"
-                width={450}
-                height={120}
-                className="object-contain mt-5"
+                width={200}
+                height={200}
+                className="object-contain mt-0"
                 priority
               />
             </motion.div>
-            <div className="space-y-6">
+            <div className="space-y-2">
               <h2 className="text-4xl sm:text-5xl md:text-4xl font-bold text-white text-center  [text-shadow:_2px_2px_0px_#000000]">
                 {t('hero.title')}
               </h2>

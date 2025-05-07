@@ -57,9 +57,17 @@ export function Advantages() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="mb-16 text-center text-2xl lg:text-4xl font-bold text-[#0A2F5D]"
+          className="mb-16 text-center text-xl lg:text-3xl font-bold text-[#0A2F5D]"
         >
-          {t('advantages.title')}
+            {locale === 'ar' ? t('advantages.title') : (
+              <>
+                {t('advantages.title1')}
+                <br />
+                {t('advantages.title2')}
+                <br />
+                {t('advantages.title3')}
+              </>
+            )}
         </motion.h2>
 
         <div className="space-y-12">
