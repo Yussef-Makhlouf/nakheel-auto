@@ -66,9 +66,14 @@ export function About() {
                   {t('about.companyInfo.title')}
                 </h3>
               </div>
-              <p className="text-lg text-gray-700 leading-relaxed">
-                {t('about.companyInfo.description')}
-              </p>
+              <div className="space-y-4">
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  {t('about.companyInfo.description')}
+                </p>
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  {t('about.companyInfo.description2')}
+                </p>
+              </div>
             </div>
 
             {/* Company Images */}
