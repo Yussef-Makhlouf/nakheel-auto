@@ -108,11 +108,11 @@ export function Partners({ locale = 'en' }: PartnersProps) {
             align-items: center;
             justify-content: center;
             padding: 20px;
-            filter: grayscale(30%);
+           
             opacity: 0.85;
             border-radius: 8px;
-            background: rgba(255, 255, 255, 0.5);
-            backdrop-filter: blur(4px);
+         
+        
             min-width: 180px;
             height: 120px;
             transition: all 0.3s ease;
@@ -123,8 +123,8 @@ export function Partners({ locale = 'en' }: PartnersProps) {
             transform: scale(1.1);
             opacity: 1;
             cursor: pointer;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-            background-color: rgba(255, 255, 255, 0.9);
+      
+      
             z-index: 10;
           }
 
