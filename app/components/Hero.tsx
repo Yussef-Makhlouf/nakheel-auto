@@ -55,17 +55,17 @@ export function Hero() {
               <Image
                 src="/newlogo.png"
                 alt="Logo"
-                width={200}
+                width={250}
                 height={200}
-                className="object-contain mt-0"
+                className="object-contain mt-0  [text-shadow:_2px_2px_0px_#000000]"
                 priority
               />
             </motion.div>
             <div className="space-y-2">
-              <h2 className="text-4xl sm:text-5xl md:text-4xl font-bold text-white text-center  [text-shadow:_2px_2px_0px_#000000]">
+              <h2 className="text-3xl sm:text-5xl md:text-3xl font-bold text-white text-center  [text-shadow:_2px_2px_0px_#000000]">
                 {t('hero.title')}
               </h2>
-              <h4 className="text-4xl sm:text-xl md:text-4xl font-bold text-white [text-shadow:_2px_2px_0px_#000000] text-center">
+              <h4 className="text-3xl sm:text-xl md:text-3xl font-bold text-white [text-shadow:_2px_2px_0px_#000000] text-center">
                 {t('hero.title2')}
               </h4>
               <h1 className="text-5xl sm:text-3xl md:text-5xl font-bold text-lime-400 text-center [text-shadow:_2px_2px_0px_#000000]">
