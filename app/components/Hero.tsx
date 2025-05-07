@@ -23,7 +23,14 @@ export function Hero() {
             src="/cover.png"
             alt="صورة الخلفية"
             fill
-            className="object-cover object-center"
+            className="object-cover object-center hidden md:block"
+            priority
+          />
+          <Image
+            src="/mobilehero.png"
+            alt="صورة الخلفية للهواتف"
+            fill
+            className="object-cover object-center md:hidden"
             priority
           />
         </div>
@@ -46,7 +53,7 @@ export function Hero() {
               transition={{ delay: 0.1 }}
             >
               <Image
-                src="/logo2.png"
+                src="/newlogo.png"
                 alt="Logo"
                 width={200}
                 height={200}
